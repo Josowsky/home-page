@@ -1,0 +1,13 @@
+@import '../../styles/variables.css';
+
+.button {
+  display: block;
+  color: var(--blue);
+  border: 2px solid var(--blue);
+  font-weight: 600;
+  padding: 16px;
+  max-width: 150px;
+  text-align: center;
+  border-radius: 30px;
+  cursor: pointer;
+}
