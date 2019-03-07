@@ -12,6 +12,10 @@
   margin-top: 64px;
 }
 
+.avatar-group {
+  margin: auto;
+}
+
 .sidebar-footer {
   margin-top: auto;
   width: 100%;

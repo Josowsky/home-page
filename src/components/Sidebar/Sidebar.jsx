@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaLinkedinIn, FaRegEnvelope } from 'react-icons/fa';
 
+import AvatarGroup from '../AvatarGroup/AvatarGroup';
 import CreditsSection from '../CreditsSection/CreditsSection';
 import FameSection from '../FameSection/FameSection';
 
@@ -22,7 +23,9 @@ const Sidebar = () => (
     <div className={styles.fameSection}>
       <FameSection icons={icons} />
     </div>
-    <div className={styles.avatarGroup}>avatar group</div>
+    <div className={styles.avatarGroup}>
+      <AvatarGroup />
+    </div>
     <div className={styles.sidebarFooter}>
       <CreditsSection />
     </div>

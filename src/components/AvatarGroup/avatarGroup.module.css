@@ -1,0 +1,14 @@
+.container {
+  color: #fff;
+  text-align: center;
+}
+
+.name {
+  font-size: 32px;
+  margin-top: 16px;
+}
+
+.title {
+  font-size: 24px;
+  margin-top: 16px;
+}
