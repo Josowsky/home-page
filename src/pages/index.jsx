@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import Button from '../components/Button/Button';
+import Container from '../components/Container/Container';
 
 import styles from './index.module.css';
 
 const MainPage = () => (
-  <div className={styles.container}>
-    <div className={styles.sidebar}>sidebar goes here</div>
-    <div className={styles.content}>
+  <Container>
+    <Fragment>
       <div className={styles.header}>
         Hello, my name is Bartek, I create modern web apps in JavaScript and I
         love what I do.
@@ -16,8 +16,8 @@ const MainPage = () => (
         <Button className={styles.button} label="About" to="/about" />
         <Button className={styles.button} label="Portfolio" to="/portfolio" />
       </div>
-    </div>
-  </div>
+    </Fragment>
+  </Container>
 );
 
 export default MainPage;
