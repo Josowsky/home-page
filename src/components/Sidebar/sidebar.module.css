@@ -1,0 +1,18 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 16px 24px;
+}
+
+.fame-section {
+  margin-top: 64px;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  width: 100%;
+}
