@@ -1,0 +1,16 @@
+.container {
+  color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  display: flex;
+  font-size: 14px;
+}
+
+.left {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin: 0 4px;
+}
