@@ -4,6 +4,10 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 
+div {
+  box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
 }
