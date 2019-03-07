@@ -1,0 +1,32 @@
+@import '../../styles/variables.css';
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  color: white;
+  font-size: 26px;
+  margin: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.icon:hover {
+  background-color: #fff;
+  color: var(--blue);
+}
+
+.dot {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+}
