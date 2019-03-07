@@ -2,12 +2,12 @@
 
 .button {
   display: block;
-  color: var(--blue);
-  border: 2px solid var(--blue);
-  font-weight: 600;
-  padding: 16px;
   max-width: 150px;
+  padding: 16px;
+  font-weight: 600;
   text-align: center;
+  border: 2px solid var(--blue);
   border-radius: 30px;
+  color: var(--blue);
   cursor: pointer;
 }
