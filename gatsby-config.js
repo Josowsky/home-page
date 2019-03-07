@@ -1,10 +1,12 @@
 module.exports = {
   plugins: [
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        google: {
+          families: ['Ubuntu'],
+        },
       },
     },
   ],
-}
+};

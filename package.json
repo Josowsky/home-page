@@ -13,8 +13,16 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
     "gatsby": "^2.1.22",
     "gatsby-plugin-typography": "^2.2.8",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
+    "prop-types": "^15.7.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-typography": "^0.16.18",
@@ -22,6 +30,7 @@
     "typography-theme-fairy-gates": "^0.16.18"
   },
   "devDependencies": {
+    "eslint-plugin-jsx-a11y": "^6.2.1",
     "prettier": "^1.16.4"
   },
   "repository": {
