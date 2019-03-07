@@ -9,6 +9,7 @@
   flex-basis: 465px;
   height: 100%;
   background: var(--blue);
+  border-radius: 12px;
 }
 
 .content {
