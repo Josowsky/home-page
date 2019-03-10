@@ -1,4 +1,6 @@
 import React from 'react';
+import { graphql, StaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import { FaLinkedinIn, FaRegEnvelope } from 'react-icons/fa';
 
 import AvatarGroup from '../AvatarGroup/AvatarGroup';
@@ -19,17 +21,39 @@ const icons = [
 ];
 
 const Sidebar = () => (
-  <div className={styles.sidebar}>
-    <div className={styles.fameSection}>
-      <FameSection icons={icons} />
-    </div>
-    <div className={styles.avatarGroup}>
-      <AvatarGroup />
-    </div>
-    <div className={styles.sidebarFooter}>
-      <CreditsSection />
-    </div>
-  </div>
+  <StaticQuery
+    query={graphql`
+      query {
+        file(absolutePath: { regex: "/sidebar/" }) {
+          childImageSharp {
+            fixed(width: 465) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <div className={styles.sidebar}>
+        <div className={styles.bgImage}>
+          <Img
+            alt="Sidebar background image"
+            fixed={data.file.childImageSharp.fixed}
+          />
+        </div>
+
+        <div className={styles.fameSection}>
+          <FameSection icons={icons} />
+        </div>
+        <div className={styles.avatarGroup}>
+          <AvatarGroup />
+        </div>
+        <div className={styles.sidebarFooter}>
+          <CreditsSection />
+        </div>
+      </div>
+    )}
+  />
 );
 
 export default Sidebar;

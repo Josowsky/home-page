@@ -1,4 +1,5 @@
 .sidebar {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -6,6 +7,14 @@
   height: 100%;
   width: 100%;
   padding: 16px 24px;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+  pointer-events: none;
 }
 
 .fame-section {

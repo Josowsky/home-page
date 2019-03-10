@@ -3,6 +3,12 @@
   text-align: center;
 }
 
+.avatar {
+  border-radius: 50%;
+  height: 168px;
+  width: 168px;
+}
+
 .name {
   font-size: 32px;
   margin-top: 16px;

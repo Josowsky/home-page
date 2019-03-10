@@ -23,9 +23,10 @@
 .sidebar {
   flex-basis: 465px;
   height: 100%;
-  background: var(--blue);
+  background-color: var(--blue);
   border-radius: 12px;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .content {
