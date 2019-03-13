@@ -1,29 +1,29 @@
 @import '../styles/variables.css';
 
+.border-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   position: relative;
   display: flex;
-  width: 100vw;
-  height: 100vh;
-  padding: 32px;
-}
-
-.container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  border: 12px solid var(--blue);
-  pointer-events: none;
+  width: calc(100% - 24px);
+  height: calc(100vh - 24px);
+  padding: 16px;
+  margin: 12px;
+  border-radius: 12px;
+  background-color: #fff;
 }
 
 .menu {
   position: absolute;
-  top: 43px;
-  right: 48px;
+  top: 30px;
+  right: 42px;
 }
 
 .sidebar {

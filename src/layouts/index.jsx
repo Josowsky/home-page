@@ -7,14 +7,16 @@ import Sidebar from '../components/Sidebar/Sidebar';
 import styles from './layout.module.css';
 
 const Layout = ({ children }) => (
-  <div className={styles.container}>
-    <div className={styles.menu}>
-      <Menu />
+  <div className={styles.borderContainer}>
+    <div className={styles.container}>
+      <div className={styles.menu}>
+        <Menu />
+      </div>
+      <div className={styles.sidebar}>
+        <Sidebar />
+      </div>
+      <div className={styles.content}>{children}</div>
     </div>
-    <div className={styles.sidebar}>
-      <Sidebar />
-    </div>
-    <div className={styles.content}>{children}</div>
   </div>
 );
 
