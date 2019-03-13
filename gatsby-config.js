@@ -2,6 +2,7 @@ const path = require(`path`);
 
 module.exports = {
   plugins: [
+    `gatsby-plugin-layout`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

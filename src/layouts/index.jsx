@@ -1,12 +1,12 @@
 import React from 'react';
 import { func, oneOfType, node } from 'prop-types';
 
-import Menu from '../Menu/Menu';
-import Sidebar from '../Sidebar/Sidebar';
+import Menu from '../components/Menu/Menu';
+import Sidebar from '../components/Sidebar/Sidebar';
 
-import styles from './container.module.css';
+import styles from './layout.module.css';
 
-const Container = ({ children }) => (
+const Layout = ({ children }) => (
   <div className={styles.container}>
     <div className={styles.menu}>
       <Menu />
@@ -18,8 +18,8 @@ const Container = ({ children }) => (
   </div>
 );
 
-Container.propTypes = {
+Layout.propTypes = {
   children: oneOfType([func, node]),
 };
 
-export default Container;
+export default Layout;
