@@ -9,4 +9,10 @@
   border-radius: 30px;
   color: var(--blue);
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--blue);
+  color: #fff;
 }
