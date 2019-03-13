@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 730px;
+}
+
+.header {
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 96px;
+  margin-bottom: 32px;
+}
+
+.paragraph {
+  font-size: 24px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.buttons {
+  display: flex;
+  justify-content: stretch;
+  margin: 32px auto 0 auto;
+  width: 400px;
+}
+
+.button {
+  flex: 1 1 0%;
+  margin: 16px;
+}
