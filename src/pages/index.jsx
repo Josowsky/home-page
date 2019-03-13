@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 
+import { routes } from '../shared/constants';
 import Button from '../components/Button/Button';
 import Container from '../components/Container/Container';
 
@@ -13,8 +14,12 @@ const MainPage = () => (
         love what I do.
       </div>
       <div className={styles.buttons}>
-        <Button className={styles.button} label="About" to="/about" />
-        <Button className={styles.button} label="Portfolio" to="/portfolio" />
+        <Button className={styles.button} label="About" to={routes.about} />
+        <Button
+          className={styles.button}
+          label="Portfolio"
+          to={routes.portfolio}
+        />
       </div>
     </Fragment>
   </Container>

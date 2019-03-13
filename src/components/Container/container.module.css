@@ -20,6 +20,12 @@
   pointer-events: none;
 }
 
+.menu {
+  position: absolute;
+  top: 43px;
+  right: 48px;
+}
+
 .sidebar {
   flex-basis: 465px;
   height: 100%;
