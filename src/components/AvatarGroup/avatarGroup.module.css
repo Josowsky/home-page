@@ -9,6 +9,12 @@
   width: 168px;
 }
 
+.avatar-image {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
 .name {
   font-size: 32px;
   margin-top: 16px;
