@@ -16,7 +16,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Ubuntu'],
+          families: ['Ubuntu:300,400'],
         },
       },
     },
