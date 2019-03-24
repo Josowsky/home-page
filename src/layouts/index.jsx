@@ -3,20 +3,21 @@ import { func, oneOfType, node } from 'prop-types';
 
 import Menu from '../components/Menu/Menu';
 import Sidebar from '../components/Sidebar/Sidebar';
+import WithBorders from '../components/WithBorders/WithBorders';
 
 import styles from './layout.module.css';
 
 const Layout = ({ children }) => (
-  <div className={styles.borderContainer}>
-    <div className={styles.container}>
+  <div className={styles.container}>
+    <WithBorders>
       <div className={styles.menu}>
         <Menu />
       </div>
-      <div className={styles.sidebar}>
+      <aside className={styles.sidebar}>
         <Sidebar />
-      </div>
+      </aside>
       <div className={styles.content}>{children}</div>
-    </div>
+    </WithBorders>
   </div>
 );
 

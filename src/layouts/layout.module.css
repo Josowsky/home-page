@@ -1,14 +1,5 @@
 @import '../styles/variables.css';
 
-.border-container {
-  height: 100vh;
-  width: 100vw;
-  background-color: var(--blue);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .container {
   position: relative;
   display: flex;
@@ -27,12 +18,15 @@
 }
 
 .sidebar {
-  flex-basis: 465px;
-  height: 100%;
+  width: 465px;
+  height: calc(100% - 56px);
   background-color: var(--blue);
   border-radius: 12px;
   flex-shrink: 0;
   overflow: hidden;
+  position: fixed;
+  top: 28px;
+  left: 28px;
 }
 
 .content {
@@ -42,6 +36,5 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 80px 22px 0 80px;
-  overflow-y: scroll;
+  margin: 80px 22px 0 545px;
 }
