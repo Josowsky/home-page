@@ -16,9 +16,4 @@ export default [
     path: routes.portfolio,
     label: 'Portfolio',
   },
-  {
-    id: 4,
-    path: routes.cv,
-    label: 'CV',
-  },
 ];
