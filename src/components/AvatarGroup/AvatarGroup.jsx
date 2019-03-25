@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 
 import { routes } from '../../shared/constants';
 
-import styles from './avatarGroup.module.css';
+import styles from './avatarGroup.module.scss';
 
 const AvatarGroup = () => (
   <StaticQuery

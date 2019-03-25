@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+
+.container {
+  display: flex;
+}
+
+.menu-item {
+  position: relative;
+  margin-left: $grid;
+  font-size: 16px;
+}
+
+.menu-item-selected {
+  color: $color-blue;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-color: $color-blue;
+    border-radius: 50%;
+    top: -46px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}

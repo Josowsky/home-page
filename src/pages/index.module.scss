@@ -1,4 +1,4 @@
-@import '../styles/variables.css';
+@import '../styles/variables';
 
 .container {
   margin-top: 200px;
@@ -9,11 +9,9 @@
 
 .header {
   font-size: 24px;
-  color: var(--grey);
-}
+  color: $color-grey;
 
-@media (min-width: 500px) {
-  .header {
+  @media (min-width: $mobile-breakpoint) {
     font-size: 32px;
   }
 }
@@ -21,17 +19,15 @@
 .buttons {
   display: flex;
   justify-content: stretch;
-  margin-top: 48px;
+  margin-top: $grid * 3;
   width: 400px;
 }
 
 .button {
   flex: 1 1 0%;
-  margin: 16px;
-}
+  margin: $grid;
 
-@media (min-width: 500px) {
-  .button {
+  @media (min-width: $mobile-breakpoint) {
     font-size: 18px;
   }
 }

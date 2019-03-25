@@ -1,7 +1,7 @@
 import React from 'react';
 import { arrayOf, string } from 'prop-types';
 
-import styles from './summaryBox.module.css';
+import styles from './summaryBox.module.scss';
 
 const SummaryBox = ({ projectDescription, projectName, projectTechStack }) => (
   <div className={styles.container}>

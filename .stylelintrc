@@ -4,6 +4,9 @@
     "stylelint-config-css-modules",
     "stylelint-config-prettier"
   ],
+  "plugins": [
+    "stylelint-scss"
+  ],
   "rules": {
     "property-no-unknown": null,
     "function-calc-no-unspaced-operator": null,
@@ -16,5 +19,7 @@
     "selector-pseudo-class-no-unknown": [ true, {
       "ignorePseudoClasses": ["at-least", "import", "export", "global"]
     } ]
+    "scss/dollar-variable-pattern": "^foo",
+    "scss/selector-no-redundant-nesting-selector": true,
   }
 }

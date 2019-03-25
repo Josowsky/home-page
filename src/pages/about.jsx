@@ -3,7 +3,7 @@ import React from 'react';
 import { routes } from '../shared/constants';
 import Button from '../components/Button/Button';
 
-import styles from './about.module.css';
+import styles from './about.module.scss';
 
 const MainPage = () => (
   <div className={styles.container}>

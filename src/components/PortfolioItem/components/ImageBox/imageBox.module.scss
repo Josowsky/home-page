@@ -1,3 +1,5 @@
+@import '../../../../styles/variables';
+
 .container {
   border: 1px rgba(119, 119, 119, 0.2) solid;
   box-shadow: 0 4px 4px rgba(119, 119, 119, 0.15);
@@ -7,10 +9,8 @@
   overflow: hidden;
   text-align: center;
   flex-shrink: 0;
-}
 
-@media (min-width: 500px) {
-  .container {
+  @media (min-width: $mobile-breakpoint) {
     flex-basis: 420px;
     height: 300px;
   }

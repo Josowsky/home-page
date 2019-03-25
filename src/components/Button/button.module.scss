@@ -1,0 +1,18 @@
+@import '../../styles/variables';
+
+.button {
+  display: block;
+  padding: $grid;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  border: 2px solid $color-blue;
+  border-radius: 30px;
+  color: $color-blue;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $color-blue;
+    color: #fff;
+  }
+}

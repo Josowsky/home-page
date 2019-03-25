@@ -6,7 +6,7 @@ import { Location } from '@reach/router';
 
 import MENU_ITEMS from './menu.constants';
 
-import styles from './menu.module.css';
+import styles from './menu.module.scss';
 
 const Menu = ({ location: { pathname } }) => (
   <div className={styles.container}>

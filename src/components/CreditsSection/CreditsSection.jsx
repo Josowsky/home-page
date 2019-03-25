@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaCoffee, FaHeart } from 'react-icons/fa';
 
-import styles from './creditsSection.module.css';
+import styles from './creditsSection.module.scss';
 
 const CreditsSection = () => (
   <div className={styles.container}>

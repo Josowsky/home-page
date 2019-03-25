@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { arrayOf, node, shape, string } from 'prop-types';
 
-import styles from './fameSection.module.css';
+import styles from './fameSection.module.scss';
 
 const FameSection = ({ icons }) => (
   <div className={styles.container}>

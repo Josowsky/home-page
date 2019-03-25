@@ -1,4 +1,4 @@
-@import '../../styles/variables.css';
+@import '../../styles/variables';
 
 .container {
   display: flex;
@@ -11,17 +11,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid rgba(255, 255, 255, 0.6);
+  border: 2px solid $color-grey-light;
   border-radius: 50%;
-  color: white;
+  color: #fff;
   font-size: 26px;
-  margin: 16px;
+  margin: $grid;
   transition: all 0.2s ease-in-out;
-}
 
-.icon:hover {
-  background-color: #fff;
-  color: var(--blue);
+  &:hover {
+    background-color: #fff;
+    color: $color-blue;
+  }
 }
 
 .dot {

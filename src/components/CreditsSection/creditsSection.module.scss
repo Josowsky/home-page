@@ -1,5 +1,7 @@
+@import '../../styles//variables.scss';
+
 .container {
-  color: rgba(255, 255, 255, 0.6);
+  color: $color-grey-light;
   width: 100%;
   display: flex;
   font-size: 14px;

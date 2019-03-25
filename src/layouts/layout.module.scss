@@ -1,18 +1,16 @@
-@import '../styles/variables.css';
+@import '../styles/variables';
 
 .container {
   position: relative;
   width: 100vw;
   height: 100vh;
-  padding: 32px;
+  padding: $grid * 2;
   background-color: #fff;
-}
 
-@media (min-width: 500px) {
-  .container {
+  @media (min-width: $mobile-breakpoint) {
     width: calc(100% - 24px);
     height: calc(100vh - 24px);
-    padding: 16px;
+    padding: $grid;
     margin: 12px;
     border-radius: 12px;
   }
@@ -20,10 +18,8 @@
 
 .menu {
   display: none;
-}
 
-@media (min-width: 500px) {
-  .menu {
+  @media (min-width: $mobile-breakpoint) {
     display: block;
     position: absolute;
     top: 30px;
@@ -33,14 +29,12 @@
 
 .sidebar {
   display: none;
-}
 
-@media (min-width: 500px) {
-  .sidebar {
+  @media (min-width: $mobile-breakpoint) {
     display: block;
     width: 465px;
     height: calc(100% - 56px);
-    background-color: var(--blue);
+    background-color: $color-blue;
     border-radius: 12px;
     flex-shrink: 0;
     overflow: hidden;
@@ -56,10 +50,8 @@
   justify-content: center;
   align-items: center;
   margin: 80px 22px 28px 22px;
-}
 
-@media (min-width: 500px) {
-  .content {
+  @media (min-width: $mobile-breakpoint) {
     margin-left: 545px;
   }
 }

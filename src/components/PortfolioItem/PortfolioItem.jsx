@@ -4,7 +4,7 @@ import { arrayOf, shape, string } from 'prop-types';
 import ImageBox from './components/ImageBox/ImageBox';
 import SummaryBox from './components/SummaryBox/SummaryBox';
 
-import styles from './portfolioItem.module.css';
+import styles from './portfolioItem.module.scss';
 
 const PortfolioItem = ({ project: { date, description, name, techStack } }) => (
   <div className={styles.container}>

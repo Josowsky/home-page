@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { func, oneOfType, node } from 'prop-types';
 import cx from 'classnames';
 
-import styles from './withBorders.module.css';
+import styles from './withBorders.module.scss';
 
 const WithBorders = ({ children }) => (
   <Fragment>

@@ -7,7 +7,7 @@ import AvatarGroup from '../AvatarGroup/AvatarGroup';
 import CreditsSection from '../CreditsSection/CreditsSection';
 import FameSection from '../FameSection/FameSection';
 
-import styles from './sidebar.module.css';
+import styles from './sidebar.module.scss';
 
 const icons = [
   {

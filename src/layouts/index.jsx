@@ -5,7 +5,7 @@ import Menu from '../components/Menu/Menu';
 import Sidebar from '../components/Sidebar/Sidebar';
 import WithBorders from '../components/WithBorders/WithBorders';
 
-import styles from './layout.module.css';
+import styles from './layout.module.scss';
 
 const Layout = ({ children }) => (
   <div className={styles.container}>

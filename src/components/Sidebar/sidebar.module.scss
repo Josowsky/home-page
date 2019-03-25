@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 .sidebar {
   position: relative;
   display: flex;
@@ -6,7 +8,7 @@
   align-items: center;
   height: 100%;
   width: 100%;
-  padding: 16px 24px;
+  padding: $grid ($grid * 1.5);
 }
 
 .bg-image {
@@ -18,7 +20,7 @@
 }
 
 .fame-section {
-  margin-top: 64px;
+  margin-top: $grid * 4;
 }
 
 .avatar-group {

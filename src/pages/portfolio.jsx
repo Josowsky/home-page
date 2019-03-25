@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 
 import PortfolioItem from '../components/PortfolioItem/PortfolioItem';
 
-import styles from './portfolio.module.css';
+import styles from './portfolio.module.scss';
 
 const PROJECTS = [
   {

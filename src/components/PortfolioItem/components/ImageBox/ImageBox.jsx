@@ -1,7 +1,7 @@
 import React from 'react';
 import { string } from 'prop-types';
 
-import styles from './imageBox.module.css';
+import styles from './imageBox.module.scss';
 
 const ImageBox = ({ projectImageUrl, projectName }) => (
   <div className={styles.container}>

@@ -1,0 +1,99 @@
+@import '../../styles/variables';
+
+.border {
+  display: none;
+
+  @media (min-width: $mobile-breakpoint) {
+    display: block;
+    background-color: $color-blue;
+    position: fixed;
+    z-index: 2;
+  }
+
+  &::before {
+    content: '';
+    position: fixed;
+    background: #fff;
+    height: 16px;
+    width: 16px;
+    border-radius: 12px;
+    z-index: 3;
+  }
+
+  &::after {
+    content: '';
+    position: fixed;
+    background: $color-blue;
+    height: 8px;
+    width: 8px;
+    z-index: 2;
+  }
+}
+
+.border-top {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12px;
+
+  &::before {
+    top: 12px;
+    left: 12px;
+  }
+
+  &::after {
+    top: 12px;
+    left: 12px;
+  }
+}
+
+.border-right {
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 100%;
+
+  &::before {
+    top: 12px;
+    right: 12px;
+  }
+
+  &::after {
+    top: 12px;
+    right: 12px;
+  }
+}
+
+.border-bottom {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 12px;
+
+  &::before {
+    bottom: 12px;
+    right: 12px;
+  }
+
+  &::after {
+    bottom: 12px;
+    right: 12px;
+  }
+}
+
+.border-left {
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 100%;
+
+  &::before {
+    bottom: 12px;
+    left: 12px;
+  }
+
+  &::after {
+    bottom: 12px;
+    left: 12px;
+  }
+}
