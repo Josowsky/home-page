@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import { routes } from '../shared/constants';
 import Button from '../components/Button/Button';
@@ -6,7 +6,7 @@ import Button from '../components/Button/Button';
 import styles from './index.module.css';
 
 const MainPage = () => (
-  <Fragment>
+  <div className={styles.container}>
     <div className={styles.header}>
       Hello, my name is Bartek, I create modern web apps in JavaScript and I
       love what I do.
@@ -19,7 +19,7 @@ const MainPage = () => (
         to={routes.portfolio}
       />
     </div>
-  </Fragment>
+  </div>
 );
 
 export default MainPage;

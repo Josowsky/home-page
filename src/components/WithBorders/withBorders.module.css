@@ -1,7 +1,14 @@
 .border {
-  background-color: var(--blue);
-  position: fixed;
-  z-index: 2;
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .border {
+    display: block;
+    background-color: var(--blue);
+    position: fixed;
+    z-index: 2;
+  }
 }
 
 .border::before {
