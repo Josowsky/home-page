@@ -6,7 +6,9 @@ import SummaryBox from './components/SummaryBox/SummaryBox';
 
 import styles from './portfolioItem.module.scss';
 
-const PortfolioItem = ({ project: { date, description, name, techStack } }) => (
+const PortfolioItem = ({
+  project: { date, description, image, name, techStack },
+}) => (
   <div>
     <div className={styles.headline}>
       <div className={styles.projectDate}>{date}</div>
@@ -18,21 +20,19 @@ const PortfolioItem = ({ project: { date, description, name, techStack } }) => (
         projectName={name}
         projectTechStack={techStack}
       />
-      <ImageBox
-        projectName={name}
-        projectImageUrl="https://images.pexels.com/photos/163125/board-printed-circuit-board-computer-electronics-163125.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-      />
+      <ImageBox projectName={name} projectImage={image} />
     </div>
   </div>
 );
 
 PortfolioItem.propTypes = {
   project: shape({
-    date: string,
-    description: string,
-    name: string,
-    techStack: arrayOf(string),
-  }),
+    date: string.isRequired,
+    description: string.isRequired,
+    image: shape({}).isRequired,
+    name: string.isRequired,
+    techStack: arrayOf(string).isRequired,
+  }).isRequired,
 };
 
 export default PortfolioItem;
