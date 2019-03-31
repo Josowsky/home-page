@@ -7,23 +7,37 @@
 }
 
 .header {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 600;
-  margin-top: $grid * 6;
+  margin-top: $grid * 3;
   margin-bottom: $grid * 2;
+
+  @media (min-width: $mobile-breakpoint) {
+    margin-top: $grid * 6;
+    font-size: 32px;
+  }
 }
 
 .paragraph {
-  font-size: 24px;
-  margin-bottom: $grid * 1.5;
+  font-size: 16px;
+  margin-bottom: $grid;
   text-align: left;
+
+  @media (min-width: $mobile-breakpoint) {
+    font-size: 24px;
+    margin-bottom: $grid * 1.5;
+  }
 }
 
 .buttons {
   display: flex;
   justify-content: stretch;
   margin: ($grid * 2) auto 0 auto;
-  width: 400px;
+  width: 100%;
+
+  @media (min-width: $mobile-breakpoint) {
+    width: 400px;
+  }
 }
 
 .button {

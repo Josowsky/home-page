@@ -4,13 +4,13 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  padding: $grid * 2;
+  padding: $grid;
   background-color: #fff;
 
   @media (min-width: $mobile-breakpoint) {
     width: calc(100% - 24px);
     height: calc(100vh - 24px);
-    padding: $grid;
+    padding: $grid * 2;
     margin: 12px;
     border-radius: 12px;
   }
@@ -49,9 +49,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 80px 22px 28px 22px;
+  margin: $grid * 3 0 $grid 0;
 
   @media (min-width: $mobile-breakpoint) {
-    margin-left: 545px;
+    margin: 80px 22px 28px 545px;
   }
 }

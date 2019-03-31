@@ -7,7 +7,7 @@ import SummaryBox from './components/SummaryBox/SummaryBox';
 import styles from './portfolioItem.module.scss';
 
 const PortfolioItem = ({ project: { date, description, name, techStack } }) => (
-  <div className={styles.container}>
+  <div>
     <div className={styles.headline}>
       <div className={styles.projectDate}>{date}</div>
       <div className={styles.headlineLine} />
