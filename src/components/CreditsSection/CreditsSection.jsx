@@ -7,7 +7,7 @@ const CreditsSection = () => (
   <div className={styles.container}>
     <div className={styles.left}>
       Made with <FaCoffee className={styles.icon} /> and{' '}
-      <FaHeart className={styles.icon} /> by me
+      <FaHeart className={styles.icon} />
     </div>
     <div>Powered by Gatsby</div>
   </div>

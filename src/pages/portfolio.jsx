@@ -10,7 +10,7 @@ const PROJECTS = [
     description:
       'Accounting application for one of the biggest banks in Germany. It allows users to create and send invoices, connect bank accounts, make payments and export data for tax consultant.',
     name: 'VR SmartGuide',
-    techStack: ['React', 'Redux', 'Cypress', 'TypeScript', 'Jira'],
+    techStack: ['React', 'Redux', 'Cypress', 'TypeScript', 'Webpack'],
   },
   {
     date: '2017 - 2018',
@@ -23,8 +23,15 @@ const PROJECTS = [
       'Rxjs',
       'Redux-Observable',
       'Socket.IO',
-      'Jira',
+      'Webpack',
     ],
+  },
+  {
+    date: '2017',
+    description:
+      'CS:GO items trading platform. It allowed users to connect their Steam account and trade items.',
+    name: 'Skinsjar',
+    techStack: ['AngularJS', 'Gulp', 'Socket.IO', 'Jira'],
   },
 ];
 
