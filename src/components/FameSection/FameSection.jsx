@@ -1,9 +1,20 @@
 import React, { Fragment } from 'react';
-import { arrayOf, node, shape, string } from 'prop-types';
+import { FaLinkedinIn, FaRegEnvelope } from 'react-icons/fa';
 
 import styles from './fameSection.module.scss';
 
-const FameSection = ({ icons }) => (
+const icons = [
+  {
+    image: <FaLinkedinIn />,
+    link: 'https://www.linkedin.com/in/bartosz-j%C3%B3zwowiak-46173a114/',
+  },
+  {
+    image: <FaRegEnvelope />,
+    link: 'mailto:bartosz@jozwowiak.pl',
+  },
+];
+
+const FameSection = () => (
   <div className={styles.container}>
     {icons.map((icon, index) => (
       <Fragment>
@@ -15,14 +26,5 @@ const FameSection = ({ icons }) => (
     ))}
   </div>
 );
-
-FameSection.propTypes = {
-  icons: arrayOf(
-    shape({
-      link: string.isRequired,
-      image: node.isRequired,
-    })
-  ).isRequired,
-};
 
 export default FameSection;

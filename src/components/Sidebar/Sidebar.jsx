@@ -1,24 +1,12 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import { FaLinkedinIn, FaRegEnvelope } from 'react-icons/fa';
 
 import AvatarGroup from '../AvatarGroup/AvatarGroup';
 import CreditsSection from '../CreditsSection/CreditsSection';
 import FameSection from '../FameSection/FameSection';
 
 import styles from './sidebar.module.scss';
-
-const icons = [
-  {
-    image: <FaLinkedinIn />,
-    link: 'https://www.linkedin.com/in/bartosz-j%C3%B3zwowiak-46173a114/',
-  },
-  {
-    image: <FaRegEnvelope />,
-    link: 'mailto:bartosz@jozwowiak.pl',
-  },
-];
 
 const Sidebar = () => (
   <StaticQuery
@@ -43,7 +31,7 @@ const Sidebar = () => (
         </div>
 
         <div className={styles.fameSection}>
-          <FameSection icons={icons} />
+          <FameSection />
         </div>
         <div className={styles.avatarGroup}>
           <AvatarGroup />
