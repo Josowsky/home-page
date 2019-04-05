@@ -1,0 +1,67 @@
+@import '../../styles/variables';
+
+.container {
+  position: absolute;
+
+  @media (min-width: $mobile-breakpoint) {
+    display: none;
+  }
+}
+
+.open-button {
+  position: fixed;
+  top: $grid * 1.5;
+  left: $grid * 1.5;
+  font-size: 28px;
+}
+
+.sidebar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: $color-blue;
+  will-change: transform;
+  transform: translate(-101%);
+  transition: transform 0.2s cubic-bezier(0, 0, 0.3, 1);
+}
+
+.sidebar-container-open {
+  transform: none;
+}
+
+.close-button {
+  position: fixed;
+  top: $grid * 1.5;
+  right: $grid * 1.5;
+  font-size: 28px;
+}
+
+.name-container {
+  margin-top: 180px;
+  margin-left: $grid;
+  color: #fff;
+}
+
+.name {
+  font-size: 30px;
+  font-weight: $font-weight-bold;
+  margin-bottom: $grid * 0.5;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.menu-container {
+  margin-left: $grid;
+  margin-top: $grid * 4;
+}
+
+.fame-section {
+  position: absolute;
+  bottom: $grid * 2;
+  left: 50%;
+  transform: translateX(-50%);
+}

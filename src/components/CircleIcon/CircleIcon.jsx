@@ -2,7 +2,7 @@ import React from 'react';
 import { func, node, oneOf, oneOfType } from 'prop-types';
 import cx from 'classnames';
 
-import styles from './CircleIcon.module.scss';
+import styles from './circleIcon.module.scss';
 
 const CircleIcon = ({ children, variant = 'blue' }) => (
   <div className={cx(styles.icon, { [styles.iconWhite]: variant === 'white' })}>
