@@ -30,7 +30,6 @@ const MainPage = () => (
         label="Portfolio"
         to={routes.portfolio}
       />
-      <Button className={styles.button} label="CV" to={routes.cv} />
     </div>
   </div>
 );

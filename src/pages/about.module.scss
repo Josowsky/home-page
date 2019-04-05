@@ -33,10 +33,10 @@
   display: flex;
   justify-content: stretch;
   margin: ($grid * 2) auto 0 auto;
-  width: 100%;
+  width: 60%;
 
   @media (min-width: $mobile-breakpoint) {
-    width: 400px;
+    width: 200px;
   }
 }
 
