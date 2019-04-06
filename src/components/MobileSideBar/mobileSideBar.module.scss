@@ -38,8 +38,10 @@
   font-size: 28px;
 }
 
-.name-container {
-  margin-top: 180px;
+.content-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   margin-left: $grid;
   color: #fff;
 }
@@ -55,8 +57,7 @@
 }
 
 .menu-container {
-  margin-left: $grid;
-  margin-top: $grid * 4;
+  margin-top: $grid * 2;
 }
 
 .fame-section {

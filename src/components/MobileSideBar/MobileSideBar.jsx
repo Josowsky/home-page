@@ -47,12 +47,14 @@ class MobileSideBar extends PureComponent {
               <FaTimes />
             </CircularIcon>
           </div>
-          <div className={styles.nameContainer}>
-            <div className={styles.name}>Bartek Józwowiak</div>
-            <div className={styles.title}>Frontend Developer</div>
-          </div>
-          <div className={styles.menuContainer}>
-            <MenuMobile />
+          <div className={styles.contentContainer}>
+            <div>
+              <div className={styles.name}>Bartek Józwowiak</div>
+              <div className={styles.title}>Frontend Developer</div>
+            </div>
+            <div className={styles.menuContainer}>
+              <MenuMobile />
+            </div>
           </div>
           <div className={styles.fameSection}>
             <FameSection />
