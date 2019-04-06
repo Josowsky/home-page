@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO/SEO';
 
 import { routes } from '../shared/constants';
 import Button from '../components/Button/Button';
@@ -31,6 +32,10 @@ const MainPage = () => (
         to={routes.portfolio}
       />
     </div>
+    <SEO
+      title="About"
+      description="I am a Web Developer experienced with React, TypeScript and Angular"
+    />
   </div>
 );
 

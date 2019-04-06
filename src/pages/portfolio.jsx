@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { shape } from 'prop-types';
 import { graphql } from 'gatsby';
+import SEO from '../components/SEO/SEO';
 
 import PortfolioItem from '../components/PortfolioItem/PortfolioItem';
 
@@ -57,6 +58,10 @@ const PortfolioPage = ({ data }) => {
           ))}
         </div>
       </div>
+      <SEO
+        title="Portfolio"
+        description="Here you can check list of projects that I worked on alongside with short descriptions and screenshots"
+      />
     </Fragment>
   );
 };
