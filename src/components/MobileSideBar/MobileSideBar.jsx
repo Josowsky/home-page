@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import cx from 'classnames';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
-import CircleIcon from '../CircleIcon/CircleIcon';
+import CircularIcon from '../CircularIcon/CircularIcon';
 import FameSection from '../FameSection/FameSection';
 import MenuMobile from '../Menu/MenuMobile';
 
@@ -27,9 +27,9 @@ class MobileSideBar extends PureComponent {
           onKeyDown={this.setMenuOpened(true)}
           className={styles.openButton}
         >
-          <CircleIcon>
+          <CircularIcon>
             <FaBars />
-          </CircleIcon>
+          </CircularIcon>
         </div>
         <div
           className={cx(styles.sidebarContainer, {
@@ -43,9 +43,9 @@ class MobileSideBar extends PureComponent {
             onKeyDown={this.setMenuOpened(false)}
             className={styles.closeButton}
           >
-            <CircleIcon variant="white">
+            <CircularIcon variant="white">
               <FaTimes />
-            </CircleIcon>
+            </CircularIcon>
           </div>
           <div className={styles.nameContainer}>
             <div className={styles.name}>Bartek Józwowiak</div>
