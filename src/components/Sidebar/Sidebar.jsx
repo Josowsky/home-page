@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
+import BackgroundImage from 'gatsby-background-image';
 
 import AvatarGroup from '../AvatarGroup/AvatarGroup';
 import CreditsSection from '../CreditsSection/CreditsSection';
@@ -14,8 +14,8 @@ const Sidebar = () => (
       query {
         file(absolutePath: { regex: "/sidebar/" }) {
           childImageSharp {
-            fixed(width: 465) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 465) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -24,9 +24,10 @@ const Sidebar = () => (
     render={data => (
       <div className={styles.sidebar}>
         <div className={styles.bgImage}>
-          <Img
+          <BackgroundImage
+            className={styles.image}
+            fluid={data.file.childImageSharp.fluid}
             alt="Sidebar background image"
-            fixed={data.file.childImageSharp.fixed}
           />
         </div>
 
