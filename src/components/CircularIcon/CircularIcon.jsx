@@ -12,7 +12,7 @@ const CircularIcon = ({ children, variant = 'blue' }) => (
 
 CircularIcon.propTypes = {
   children: oneOfType([func, node]).isRequired,
-  variant: oneOf(['blue, white']),
+  variant: oneOf(['blue', 'white']),
 };
 
 export default CircularIcon;

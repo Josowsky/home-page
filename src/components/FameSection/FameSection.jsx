@@ -18,8 +18,8 @@ const FameSection = () => (
   <div className={styles.container}>
     {icons.map((icon, index) => (
       <Fragment>
-        {index > 0 && <div className={styles.dot} />}
-        <a className={styles.icon} href={icon.link}>
+        {index > 0 && <div key={index} className={styles.dot} />}
+        <a key={index} className={styles.icon} href={icon.link}>
           {icon.image}
         </a>
       </Fragment>
