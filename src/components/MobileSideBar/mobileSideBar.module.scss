@@ -54,7 +54,7 @@
 
 .content-container {
   position: absolute;
-  top: 50%;
+  top: 250px;
   transform: translateY(-50%);
   margin-left: $grid;
   color: #fff;
@@ -71,12 +71,12 @@
 }
 
 .menu-container {
-  margin-top: $grid * 2;
+  margin-top: $grid;
 }
 
 .fame-section {
   position: absolute;
-  bottom: $grid * 2;
+  bottom: $grid * 4;
   left: 50%;
   transform: translateX(-50%);
 }
