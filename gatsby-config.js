@@ -7,6 +7,13 @@ module.exports = {
     `gatsby-plugin-sharp`,
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -23,4 +30,7 @@ module.exports = {
       },
     },
   ],
+  siteMetadata: {
+    siteUrl: `https://www.bartek-jozwowiak.me`,
+  },
 };
