@@ -2,9 +2,9 @@ import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 
-import AvatarGroup from '../AvatarGroup/AvatarGroup';
-import CreditsSection from '../CreditsSection/CreditsSection';
-import FameSection from '../FameSection/FameSection';
+import AvatarGroup from 'components/AvatarGroup/AvatarGroup';
+import CreditsSection from 'components/CreditsSection/CreditsSection';
+import FameSection from 'components/FameSection/FameSection';
 
 import styles from './sidebar.module.scss';
 

@@ -55,6 +55,7 @@
     "typography-theme-fairy-gates": "^0.16.18"
   },
   "devDependencies": {
+    "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "prettier": "^1.16.4"
   },

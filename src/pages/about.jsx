@@ -1,8 +1,8 @@
 import React from 'react';
-import SEO from '../components/SEO/SEO';
+import SEO from 'components/SEO/SEO';
 
-import { routes } from '../shared/constants';
-import Button from '../components/Button/Button';
+import { routes } from 'shared/constants';
+import Button from 'components/Button/Button';
 
 import styles from './about.module.scss';
 

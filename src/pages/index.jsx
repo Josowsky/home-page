@@ -2,10 +2,10 @@ import React from 'react';
 import { shape } from 'prop-types';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import SEO from '../components/SEO/SEO';
+import SEO from 'components/SEO/SEO';
 
-import { routes } from '../shared/constants';
-import Button from '../components/Button/Button';
+import { routes } from 'shared/constants';
+import Button from 'components/Button/Button';
 
 import styles from './index.module.scss';
 

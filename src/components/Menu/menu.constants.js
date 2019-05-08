@@ -1,4 +1,4 @@
-import { routes } from '../../shared/constants';
+import { routes } from 'shared/constants';
 
 export default [
   {

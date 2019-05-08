@@ -4,9 +4,9 @@ import { graphql, StaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
-import CircularIcon from '../CircularIcon/CircularIcon';
-import FameSection from '../FameSection/FameSection';
-import MenuMobile from '../Menu/MenuMobile';
+import CircularIcon from 'components/CircularIcon/CircularIcon';
+import FameSection from 'components/FameSection/FameSection';
+import MenuMobile from 'components/Menu/MenuMobile';
 
 import styles from './mobileSideBar.module.scss';
 

@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 import { shape } from 'prop-types';
 import { graphql } from 'gatsby';
-import SEO from '../components/SEO/SEO';
+import SEO from 'components/SEO/SEO';
 
-import PortfolioItem from '../components/PortfolioItem/PortfolioItem';
+import PortfolioItem from 'components/PortfolioItem/PortfolioItem';
 
 import styles from './portfolio.module.scss';
 
