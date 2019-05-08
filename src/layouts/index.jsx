@@ -6,10 +6,12 @@ import MobileSideBar from 'components/MobileSideBar/MobileSideBar';
 import Sidebar from 'components/Sidebar/Sidebar';
 import WithBorders from 'components/WithBorders/WithBorders';
 
+import GlobalStyles from 'styles/GlobalStyles';
 import styles from './layout.module.scss';
 
 const Layout = ({ children }) => (
   <div className={styles.container}>
+    <GlobalStyles />
     <WithBorders>
       <div className={styles.menu}>
         <Menu />
