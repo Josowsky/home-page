@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { FaLinkedinIn, FaRegEnvelope } from 'react-icons/fa';
 
-import styles from './fameSection.module.scss';
+import { StyledContainer, StyledLink, StyledDot } from './FameSection.style';
 
 const icons = [
   {
@@ -17,16 +17,14 @@ const icons = [
 ];
 
 const FameSection = () => (
-  <div className={styles.container}>
+  <StyledContainer>
     {icons.map((icon, index) => (
       <Fragment key={icon.id}>
-        {index > 0 && <div className={styles.dot} />}
-        <a className={styles.icon} href={icon.link}>
-          {icon.image}
-        </a>
+        {index > 0 && <StyledDot />}
+        <StyledLink href={icon.link}>{icon.image}</StyledLink>
       </Fragment>
     ))}
-  </div>
+  </StyledContainer>
 );
 
 export default FameSection;

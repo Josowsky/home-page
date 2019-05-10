@@ -21,6 +21,7 @@
       { "components": ["Link"], "specialLink": ["to"] }
     ],
     "prefer-promise-reject-errors": "off",
+    "import/prefer-default-export": "off",
     "jsx-a11y/label-has-for": [
       "error",
       {

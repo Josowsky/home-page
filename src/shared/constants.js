@@ -6,6 +6,24 @@ export const routes = {
   portfolio: '/portfolio',
 };
 
+export const menuItems = [
+  {
+    id: 1,
+    path: routes.home,
+    label: 'Home',
+  },
+  {
+    id: 2,
+    path: routes.about,
+    label: 'About',
+  },
+  {
+    id: 3,
+    path: routes.portfolio,
+    label: 'Portfolio',
+  },
+];
+
 // Styles
 export const colorBlue = '#00acc9';
 export const colorGrey = '#777';

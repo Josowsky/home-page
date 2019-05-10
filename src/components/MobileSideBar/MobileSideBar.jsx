@@ -6,7 +6,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 
 import CircularIcon from 'components/CircularIcon/CircularIcon';
 import FameSection from 'components/FameSection/FameSection';
-import MenuMobile from 'components/Menu/MenuMobile';
+import MenuMobile from 'components/MenuMobile/MenuMobile';
 
 import styles from './mobileSideBar.module.scss';
 
