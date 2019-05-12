@@ -7,22 +7,27 @@ import Sidebar from 'components/Sidebar/Sidebar';
 import WithBorders from 'components/WithBorders/WithBorders';
 
 import GlobalStyles from 'styles/GlobalStyles';
-import styles from './layout.module.scss';
+import {
+  StyledContainer,
+  StyledMenu,
+  StyledSidebar,
+  StyledContent,
+} from './index.style';
 
 const Layout = ({ children }) => (
-  <div className={styles.container}>
+  <StyledContainer>
     <GlobalStyles />
     <WithBorders>
-      <div className={styles.menu}>
+      <StyledMenu>
         <Menu />
-      </div>
-      <aside className={styles.sidebar}>
+      </StyledMenu>
+      <StyledSidebar>
         <Sidebar />
-      </aside>
-      <div className={styles.content}>{children}</div>
+      </StyledSidebar>
+      <StyledContent>{children}</StyledContent>
     </WithBorders>
     <MobileSideBar />
-  </div>
+  </StyledContainer>
 );
 
 Layout.propTypes = {

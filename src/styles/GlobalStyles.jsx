@@ -19,4 +19,8 @@ export default createGlobalStyle`
     text-decoration: none;
     color: ${colorGrey};
   }
+
+  h1, h2, h3, h4, h5 {
+    font-weight: ${fontWeightNormal};
+  }
 `;

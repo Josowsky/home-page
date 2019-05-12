@@ -1,14 +1,24 @@
 import React, { PureComponent } from 'react';
-import cx from 'classnames';
 import { graphql, StaticQuery } from 'gatsby';
-import BackgroundImage from 'gatsby-background-image';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 import CircularIcon from 'components/CircularIcon/CircularIcon';
 import FameSection from 'components/FameSection/FameSection';
 import MenuMobile from 'components/MenuMobile/MenuMobile';
 
-import styles from './mobileSideBar.module.scss';
+import {
+  StyledContainer,
+  StyledOpenButton,
+  StyledSidebarContainer,
+  StyledBackgroundImageContainer,
+  StyledBackgroundImage,
+  StyledCloseButton,
+  StyledContentContainer,
+  StyledName,
+  StyledTitle,
+  StyledMenuContainer,
+  StyledFameSection,
+} from './MobileSideBar.style';
 
 class MobileSideBar extends PureComponent {
   state = {
@@ -34,55 +44,48 @@ class MobileSideBar extends PureComponent {
           }
         `}
         render={data => (
-          <div className={styles.container}>
-            <div
+          <StyledContainer>
+            <StyledOpenButton
               role="button"
               tabIndex="0"
               onClick={this.setMenuOpened(true)}
               onKeyDown={this.setMenuOpened(true)}
-              className={styles.openButton}
             >
               <CircularIcon>
                 <FaBars />
               </CircularIcon>
-            </div>
-            <div
-              className={cx(styles.sidebarContainer, {
-                [styles.sidebarContainerOpen]: isMenuOpened,
-              })}
-            >
-              <div className={styles.bgImage}>
-                <BackgroundImage
-                  className={styles.image}
+            </StyledOpenButton>
+            <StyledSidebarContainer isMenuOpened={isMenuOpened}>
+              <StyledBackgroundImageContainer>
+                <StyledBackgroundImage
                   fluid={data.file.childImageSharp.fluid}
                   alt="Sidebar background image"
                 />
-              </div>
-              <div
+              </StyledBackgroundImageContainer>
+              <StyledCloseButton
                 role="button"
                 tabIndex="0"
                 onClick={this.setMenuOpened(false)}
                 onKeyDown={this.setMenuOpened(false)}
-                className={styles.closeButton}
               >
                 <CircularIcon variant="white">
                   <FaTimes />
                 </CircularIcon>
-              </div>
-              <div className={styles.contentContainer}>
+              </StyledCloseButton>
+              <StyledContentContainer>
                 <div>
-                  <div className={styles.name}>Bartek Józwowiak</div>
-                  <div className={styles.title}>Frontend Developer</div>
+                  <StyledName>Bartek Józwowiak</StyledName>
+                  <StyledTitle>Frontend Developer</StyledTitle>
                 </div>
-                <div className={styles.menuContainer}>
+                <StyledMenuContainer>
                   <MenuMobile onClick={this.setMenuOpened(false)} />
-                </div>
-              </div>
-              <div className={styles.fameSection}>
+                </StyledMenuContainer>
+              </StyledContentContainer>
+              <StyledFameSection>
                 <FameSection />
-              </div>
-            </div>
-          </div>
+              </StyledFameSection>
+            </StyledSidebarContainer>
+          </StyledContainer>
         )}
       />
     );

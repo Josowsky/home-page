@@ -2,41 +2,42 @@ import React from 'react';
 import SEO from 'components/SEO/SEO';
 
 import { routes } from 'shared/constants';
-import Button from 'components/Button/Button';
 
-import styles from './about.module.scss';
+import {
+  StyledContainer,
+  StyledHeader,
+  StyledParagraph,
+  StyledButtons,
+  StyledButton,
+} from './about.style';
 
 const MainPage = () => (
-  <div className={styles.container}>
-    <h2 className={styles.header}>About me</h2>
-    <div className={styles.paragraph}>
+  <StyledContainer>
+    <StyledHeader>About me</StyledHeader>
+    <StyledParagraph>
       Currently you can find me in Poznan, Poland where I work as a Frontend
       Developer at NetGuru. Since beginning of my journey I helped to build
-      mutiple web applications for innovators and entrepreneurs from all over
+      multiple web applications for innovators and entrepreneurs from all over
       the world. I’ve had the pleasure to work with many talented people and
       great companies along the way.
-    </div>
-    <div className={styles.paragraph}>
+    </StyledParagraph>
+    <StyledParagraph>
       I enjoy web programming, learning new stuff and getting to know all the
-      news from the JavaScript world. I belive that the best way to grow is by
+      news from the JavaScript world. I believe that the best way to grow is by
       patience and consistency.
-    </div>
-    <div className={styles.paragraph}>
+    </StyledParagraph>
+    <StyledParagraph>
       In spare time I like to broaden my horizons by reading nonfiction books
       and traveling.
-    </div>
-    <div className={styles.buttons}>
-      <Button
-        className={styles.button}
-        label="Portfolio"
-        to={routes.portfolio}
-      />
-    </div>
+    </StyledParagraph>
+    <StyledButtons>
+      <StyledButton label="Portfolio" to={routes.portfolio} />
+    </StyledButtons>
     <SEO
       title="About"
       description="I am a Web Developer experienced with React, TypeScript and Angular"
     />
-  </div>
+  </StyledContainer>
 );
 
 export default MainPage;

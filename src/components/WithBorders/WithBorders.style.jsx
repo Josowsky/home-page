@@ -1,11 +1,13 @@
-@import '../../styles/variables';
+import styled from 'styled-components';
 
-.border {
+import { colorBlue, mobileBreakpoint } from 'shared/constants';
+
+const StyledBorder = styled.div`
   display: none;
 
-  @media (min-width: $mobile-breakpoint) {
+  @media (min-width: ${mobileBreakpoint}px) {
     display: block;
-    background-color: $color-blue;
+    background-color: ${colorBlue};
     position: fixed;
     z-index: 2;
   }
@@ -23,14 +25,14 @@
   &::after {
     content: '';
     position: fixed;
-    background: $color-blue;
+    background: ${colorBlue};
     height: 8px;
     width: 8px;
     z-index: 2;
   }
-}
+`;
 
-.border-top {
+export const StyledBorderTop = styled(StyledBorder)`
   top: 0;
   left: 0;
   width: 100%;
@@ -45,9 +47,9 @@
     top: 12px;
     left: 12px;
   }
-}
+`;
 
-.border-right {
+export const StyledBorderRight = styled(StyledBorder)`
   top: 0;
   right: 0;
   width: 12px;
@@ -62,9 +64,9 @@
     top: 12px;
     right: 12px;
   }
-}
+`;
 
-.border-bottom {
+export const StyledBorderBottom = styled(StyledBorder)`
   bottom: 0;
   left: 0;
   width: 100%;
@@ -79,9 +81,9 @@
     bottom: 12px;
     right: 12px;
   }
-}
+`;
 
-.border-left {
+export const StyledBorderLeft = styled(StyledBorder)`
   top: 0;
   left: 0;
   width: 12px;
@@ -96,4 +98,4 @@
     bottom: 12px;
     left: 12px;
   }
-}
+`;
