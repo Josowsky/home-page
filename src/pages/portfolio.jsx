@@ -1,11 +1,15 @@
 import React, { Fragment } from 'react';
 import { shape } from 'prop-types';
 import { graphql } from 'gatsby';
-import SEO from '../components/SEO/SEO';
+import SEO from 'components/SEO/SEO';
 
-import PortfolioItem from '../components/PortfolioItem/PortfolioItem';
+import PortfolioItem from 'components/PortfolioItem/PortfolioItem';
 
-import styles from './portfolio.module.scss';
+import {
+  StyledContainer,
+  StyledHeader,
+  StyledSubheader,
+} from './portfolio.style';
 
 const PortfolioPage = ({ data }) => {
   const PROJECTS = [
@@ -47,17 +51,17 @@ const PortfolioPage = ({ data }) => {
 
   return (
     <Fragment>
-      <div className={styles.container}>
-        <h1 className={styles.header}>Portfolio</h1>
-        <div className={styles.subheader}>
+      <StyledContainer>
+        <StyledHeader>Portfolio</StyledHeader>
+        <StyledSubheader>
           Below you can find some projects that I worked on.
-        </div>
+        </StyledSubheader>
         <div>
           {PROJECTS.map(project => (
             <PortfolioItem key={project.id} project={project} />
           ))}
         </div>
-      </div>
+      </StyledContainer>
       <SEO
         title="Portfolio"
         description="Here you can check list of projects that I worked on alongside with short descriptions and screenshots"

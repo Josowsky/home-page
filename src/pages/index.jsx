@@ -1,40 +1,37 @@
 import React from 'react';
 import { shape } from 'prop-types';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import SEO from '../components/SEO/SEO';
+import SEO from 'components/SEO/SEO';
 
-import { routes } from '../shared/constants';
-import Button from '../components/Button/Button';
+import { routes } from 'shared/constants';
 
-import styles from './index.module.scss';
+import {
+  StyledContainer,
+  StyledAvatarContainer,
+  StyledImage,
+  StyledHeader,
+  StyledButtons,
+  StyledButton,
+} from './index.style';
 
 const MainPage = ({ data }) => (
-  <div className={styles.container}>
-    <div className={styles.avatarContainer}>
-      <Img
-        alt="My photo"
-        className={styles.avatarImage}
-        fixed={data.file.childImageSharp.fixed}
-      />
-    </div>
-    <div className={styles.header}>
+  <StyledContainer>
+    <StyledAvatarContainer>
+      <StyledImage alt="My photo" fixed={data.file.childImageSharp.fixed} />
+    </StyledAvatarContainer>
+    <StyledHeader>
       Hello, my name is Bartek, I create modern web apps in JavaScript and I
       love what I do.
-    </div>
-    <div className={styles.buttons}>
-      <Button className={styles.button} label="About" to={routes.about} />
-      <Button
-        className={styles.button}
-        label="Portfolio"
-        to={routes.portfolio}
-      />
-    </div>
+    </StyledHeader>
+    <StyledButtons>
+      <StyledButton label="About" to={routes.about} />
+      <StyledButton label="Portfolio" to={routes.portfolio} />
+    </StyledButtons>
     <SEO
       title="Bartek Józwowiak"
       description="I am a Web Developer with Frontend experience. Check out my portfolio to see projects that I worked on."
     />
-  </div>
+  </StyledContainer>
 );
 
 MainPage.propTypes = {

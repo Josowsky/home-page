@@ -1,14 +1,12 @@
 import React from 'react';
 import { string } from 'prop-types';
-import cx from 'classnames';
-import { Link } from 'gatsby';
 
-import styles from './button.module.scss';
+import { StyledButton } from './Button.style';
 
 const Button = ({ className = '', label, to }) => (
-  <Link className={cx(styles.button, className)} to={to}>
+  <StyledButton to={to} className={className}>
     {label}
-  </Link>
+  </StyledButton>
 );
 
 Button.propTypes = {

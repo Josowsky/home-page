@@ -1,21 +1,27 @@
 import React from 'react';
 import { arrayOf, string } from 'prop-types';
 
-import styles from './summaryBox.module.scss';
+import {
+  StyledContainer,
+  StyledHeader,
+  StyledDescription,
+  StyledTechStackContainer,
+  StyledTechStackHeader,
+} from './SummaryBox.style';
 
 const SummaryBox = ({ projectDescription, projectName, projectTechStack }) => (
-  <div className={styles.container}>
-    <h2 className={styles.header}>{projectName}</h2>
-    <div className={styles.description}>{projectDescription}</div>
-    <div className={styles.techStack}>
-      <div className={styles.techStackHeader}>I worked with:</div>
-      <div className={styles.techStackList}>
+  <StyledContainer>
+    <StyledHeader>{projectName}</StyledHeader>
+    <StyledDescription>{projectDescription}</StyledDescription>
+    <StyledTechStackContainer>
+      <StyledTechStackHeader>I worked with:</StyledTechStackHeader>
+      <div>
         {projectTechStack.map((tech, index) =>
           index === projectTechStack.length - 1 ? ` ${tech}` : ` ${tech},`
         )}
       </div>
-    </div>
-  </div>
+    </StyledTechStackContainer>
+  </StyledContainer>
 );
 
 SummaryBox.propTypes = {

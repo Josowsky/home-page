@@ -4,24 +4,29 @@ import { arrayOf, shape, string } from 'prop-types';
 import ImageBox from './components/ImageBox/ImageBox';
 import SummaryBox from './components/SummaryBox/SummaryBox';
 
-import styles from './portfolioItem.module.scss';
+import {
+  StyledDateContainer,
+  StyledDate,
+  StyledDateLine,
+  StyledBoxesContainer,
+} from './PortfolioItem.style';
 
 const PortfolioItem = ({
   project: { date, description, image, name, techStack },
 }) => (
   <div>
-    <div className={styles.headline}>
-      <div className={styles.projectDate}>{date}</div>
-      <div className={styles.headlineLine} />
-    </div>
-    <div className={styles.boxesContainer}>
+    <StyledDateContainer>
+      <StyledDate>{date}</StyledDate>
+      <StyledDateLine />
+    </StyledDateContainer>
+    <StyledBoxesContainer>
       <SummaryBox
         projectDescription={description}
         projectName={name}
         projectTechStack={techStack}
       />
       <ImageBox projectName={name} projectImage={image} />
-    </div>
+    </StyledBoxesContainer>
   </div>
 );
 

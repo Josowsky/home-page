@@ -1,10 +1,15 @@
 import React from 'react';
-import { StaticQuery, graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { StaticQuery, graphql } from 'gatsby';
 
-import { routes } from '../../shared/constants';
+import { routes } from 'shared/constants';
 
-import styles from './avatarGroup.module.scss';
+import {
+  StyledContainer,
+  StyledImage,
+  StyledAvatar,
+  StyledName,
+  StyledTitle,
+} from './AvatarGroup.style';
 
 const AvatarGroup = () => (
   <StaticQuery
@@ -20,17 +25,13 @@ const AvatarGroup = () => (
       }
     `}
     render={data => (
-      <div className={styles.container}>
-        <Link to={routes.home} className={styles.avatar}>
-          <Img
-            alt="My photo"
-            className={styles.avatarImage}
-            fixed={data.file.childImageSharp.fixed}
-          />
-        </Link>
-        <div className={styles.name}>Bartek Józwowiak</div>
-        <div className={styles.title}>Frontend Developer</div>
-      </div>
+      <StyledContainer>
+        <StyledAvatar to={routes.home}>
+          <StyledImage alt="My photo" fixed={data.file.childImageSharp.fixed} />
+        </StyledAvatar>
+        <StyledName>Bartek Józwowiak</StyledName>
+        <StyledTitle>Frontend Developer</StyledTitle>
+      </StyledContainer>
     )}
   />
 );

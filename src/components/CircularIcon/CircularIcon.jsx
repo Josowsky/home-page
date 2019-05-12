@@ -1,13 +1,10 @@
 import React from 'react';
 import { func, node, oneOf, oneOfType } from 'prop-types';
-import cx from 'classnames';
 
-import styles from './circularIcon.module.scss';
+import { StyledIcon } from './CircularIcon.style';
 
 const CircularIcon = ({ children, variant = 'blue' }) => (
-  <div className={cx(styles.icon, { [styles.iconWhite]: variant === 'white' })}>
-    {children}
-  </div>
+  <StyledIcon variant={variant}>{children}</StyledIcon>
 );
 
 CircularIcon.propTypes = {
