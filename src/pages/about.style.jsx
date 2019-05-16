@@ -12,10 +12,6 @@ export const StyledContainer = styled.div`
 export const StyledHeader = styled.h1`
   margin-top: ${grid * 3}px;
   margin-bottom: ${grid * 2}px;
-
-  @media (min-width: ${mobileBreakpoint}px) {
-    margin-top: ${grid * 6}px;
-  }
 `;
 
 export const StyledParagraph = styled.p`

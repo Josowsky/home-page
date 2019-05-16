@@ -8,7 +8,7 @@ export const StyledContainer = styled.div`
 `;
 
 export const StyledHeader = styled.h1`
-  margin-top: ${grid * 4}px;
+  margin-top: ${grid * 3}px;
   margin-bottom: ${grid}px;
 `;
 

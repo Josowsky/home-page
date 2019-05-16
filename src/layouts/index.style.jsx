@@ -50,7 +50,6 @@ export const StyledContent = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   margin: ${grid * 3}px 0 ${grid}px 0;
 
   @media (min-width: ${mobileBreakpoint}px) {
