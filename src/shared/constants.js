@@ -4,6 +4,7 @@ export const routes = {
   home: '/',
   about: '/about',
   portfolio: '/portfolio',
+  blog: '/blog',
 };
 
 export const menuItems = [
@@ -21,6 +22,11 @@ export const menuItems = [
     id: 3,
     path: routes.portfolio,
     label: 'Portfolio',
+  },
+  {
+    id: 4,
+    path: routes.blog,
+    label: 'Blog',
   },
 ];
 
