@@ -31,14 +31,8 @@ export const StyledImage = styled(Img)`
 `;
 
 export const StyledHeader = styled.h1`
-  font-size: 24px;
   color: ${colorGrey};
-  text-align: justify;
-
-  @media (min-width: ${mobileBreakpoint}px) {
-    font-size: 32px;
-    text-align: center;
-  }
+  text-align: center;
 `;
 
 export const StyledButtons = styled.div`

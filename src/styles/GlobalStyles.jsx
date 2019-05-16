@@ -1,6 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
-import { colorGrey, fontWeightNormal } from 'shared/constants';
+import {
+  colorGrey,
+  fontWeightNormal,
+  mobileBreakpoint,
+} from 'shared/constants';
 
 export default createGlobalStyle`
   body {
@@ -22,5 +26,21 @@ export default createGlobalStyle`
 
   h1, h2, h3, h4, h5 {
     font-weight: ${fontWeightNormal};
+  }
+
+  h1 {
+    font-size: 24px;
+
+    @media (min-width: ${mobileBreakpoint}px) {
+      font-size: 32px;
+    }
+  }
+
+  h2 {
+    font-size: 16px;
+
+    @media (min-width: ${mobileBreakpoint}px) {
+      font-size: 24px;
+    }
   }
 `;

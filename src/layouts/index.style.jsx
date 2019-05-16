@@ -46,7 +46,7 @@ export const StyledSidebar = styled.aside`
   }
 `;
 
-export const StyledContent = styled.div`
+export const StyledContent = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;

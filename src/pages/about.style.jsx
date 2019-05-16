@@ -9,19 +9,16 @@ export const StyledContainer = styled.div`
   max-width: 730px;
 `;
 
-export const StyledHeader = styled.h2`
-  font-size: 24px;
-  font-weight: 600;
+export const StyledHeader = styled.h1`
   margin-top: ${grid * 3}px;
   margin-bottom: ${grid * 2}px;
 
   @media (min-width: ${mobileBreakpoint}px) {
     margin-top: ${grid * 6}px;
-    font-size: 32px;
   }
 `;
 
-export const StyledParagraph = styled.div`
+export const StyledParagraph = styled.p`
   font-size: 16px;
   margin-bottom: ${grid}px;
   text-align: left;
