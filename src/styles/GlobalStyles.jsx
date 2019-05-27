@@ -43,4 +43,8 @@ export default createGlobalStyle`
       font-size: 24px;
     }
   }
+
+  p {
+    margin: 0;
+  }
 `;
