@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 import {
+  colorBlue,
   colorGrey,
   fontWeightNormal,
   mobileBreakpoint,
@@ -21,11 +22,12 @@ export default createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: ${colorGrey};
+    color: ${colorBlue};
   }
 
   h1, h2, h3, h4, h5 {
     font-weight: ${fontWeightNormal};
+    margin: 0;
   }
 
   h1 {
