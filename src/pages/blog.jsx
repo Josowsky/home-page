@@ -1,16 +1,28 @@
 import React from 'react';
-import SEO from 'components/SEO/SEO';
+import { arrayOf, shape, string } from 'prop-types';
+import { graphql } from 'gatsby';
 
 import BlogPostCard from 'components/BlogPostCard/BlogPostCard';
+import SEO from 'components/SEO/SEO';
 
 import { StyledContainer, StyledHeader } from './about.style';
 
-const MainPage = () => (
+const MainPage = ({
+  data: {
+    allContentfulPost: { edges: posts },
+  },
+}) => (
   <StyledContainer>
     <StyledHeader>Blog</StyledHeader>
     <div>
-      <BlogPostCard />
-      <BlogPostCard />
+      {posts.map(({ node }) => (
+        <BlogPostCard
+          key={node.slug}
+          title={node.title}
+          subtitle={node.subtitle}
+          slug={node.slug}
+        />
+      ))}
     </div>
     <SEO
       title="Blog"
@@ -19,4 +31,34 @@ const MainPage = () => (
   </StyledContainer>
 );
 
+MainPage.propTypes = {
+  data: shape({
+    allContentfulPost: shape({
+      edges: arrayOf(
+        shape({
+          node: shape({
+            title: string.isRequired,
+            subtitle: string.isRequired,
+            slug: string.isRequired,
+          }).isRequired,
+        }).isRequired
+      ).isRequired,
+    }).isRequired,
+  }).isRequired,
+};
+
 export default MainPage;
+
+export const pageQuery = graphql`
+  query {
+    allContentfulPost {
+      edges {
+        node {
+          title
+          subtitle
+          slug
+        }
+      }
+    }
+  }
+`;
