@@ -3,41 +3,24 @@ import { shape, string } from 'prop-types';
 import { graphql } from 'gatsby';
 
 import {
-  HeadingLarge,
-  Heading,
-  HeadingSmall,
-  Paragraph,
-  Highlight,
-} from 'components/Typography/Typography';
-
-import { StyledHeader, StyledTitle, StyledDescription } from './BlogPost.style';
+  StyledContainer,
+  StyledHeader,
+  StyledTitle,
+  StyledDescription,
+} from './BlogPost.style';
 
 const BlogPost = ({ data: { contentfulPost: post } }) => (
-  <p>
+  <StyledContainer>
     <StyledHeader>
       <StyledTitle>{post.title}</StyledTitle>
       <StyledDescription>May 14, 2019 • 6 min read</StyledDescription>
     </StyledHeader>
-
     <div
       dangerouslySetInnerHTML={{
         __html: post.content.childContentfulRichText.html,
       }}
     />
-
-    <Paragraph>
-      This text is <Highlight>highlighted</Highlight> in some fancy way.
-    </Paragraph>
-
-    <HeadingLarge>This is serious heading</HeadingLarge>
-    <p>And some text</p>
-
-    <Heading>This is less serious heading</Heading>
-    <p>And some text</p>
-
-    <HeadingSmall>This is little heading</HeadingSmall>
-    <p>And some text</p>
-  </p>
+  </StyledContainer>
 );
 
 BlogPost.propTypes = {
