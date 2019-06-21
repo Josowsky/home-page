@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { colorBlue, grid, mobileBreakpoint } from 'shared/constants';
 
 export const StyledContainer = styled.div`
+  display: flex;
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -46,7 +47,7 @@ export const StyledSidebar = styled.aside`
   }
 `;
 
-export const StyledContent = styled.main`
+export const StyledPageContent = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,4 +56,9 @@ export const StyledContent = styled.main`
   @media (min-width: ${mobileBreakpoint}px) {
     margin: 80px 22px 28px 545px;
   }
+`;
+
+export const StyledBlogContent = styled.main`
+  width: 600px;
+  margin: ${grid * 6}px auto ${grid}px auto;
 `;
