@@ -5,7 +5,7 @@ import { graphql } from 'gatsby';
 import BlogPostCard from 'components/BlogPostCard/BlogPostCard';
 import SEO from 'components/SEO/SEO';
 
-import { StyledContainer, StyledHeader } from './about.style';
+import { StyledContainer } from './blog.style';
 
 const MainPage = ({
   data: {
@@ -13,7 +13,6 @@ const MainPage = ({
   },
 }) => (
   <StyledContainer>
-    <StyledHeader>Blog</StyledHeader>
     <div>
       {posts.map(({ node }) => (
         <BlogPostCard
