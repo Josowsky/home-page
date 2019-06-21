@@ -60,5 +60,5 @@ export const StyledPageContent = styled.main`
 
 export const StyledBlogContent = styled.main`
   width: 600px;
-  margin: ${grid * 6}px auto ${grid}px auto;
+  margin: ${grid * 3}px auto ${grid}px auto;
 `;
