@@ -4,7 +4,7 @@ import { grid, fontWeightBold } from 'shared/constants';
 
 export const StyledContainer = styled.article`
   /*
-    Articles are stored on the database as richtext
+    Articles are stored in the database as richtext
     Richtext is being transpiled to HTML
   */
   h1 {
