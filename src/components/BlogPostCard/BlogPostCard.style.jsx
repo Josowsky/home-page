@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colorBlue, fontWeightBold, grid } from 'shared/constants';
+import { colorBlue, colorGrey, fontWeightBold, grid } from 'shared/constants';
 
 export const StyledContainer = styled.article`
   padding: ${grid * 2}px;
@@ -21,5 +21,10 @@ export const StyledTitle = styled.h2`
 `;
 
 export const StyledSmallDescription = styled.p`
+  color: ${colorGrey};
   opacity: 0.6;
+`;
+
+export const StyledDescription = styled.p`
+  color: ${colorGrey};
 `;

@@ -7,6 +7,7 @@ import {
   StyledHeader,
   StyledTitle,
   StyledSmallDescription,
+  StyledDescription,
 } from './BlogPostCard.style';
 
 const BlogPostCard = ({ title, subtitle, slug }) => (
@@ -18,7 +19,7 @@ const BlogPostCard = ({ title, subtitle, slug }) => (
           May 14, 2019 • 6 min read
         </StyledSmallDescription>
       </StyledHeader>
-      <p>{subtitle}</p>
+      <StyledDescription>{subtitle}</StyledDescription>
     </StyledContainer>
   </Link>
 );
