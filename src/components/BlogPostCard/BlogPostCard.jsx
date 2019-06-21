@@ -11,17 +11,15 @@ import {
 } from './BlogPostCard.style';
 
 const BlogPostCard = ({ title, subtitle, slug }) => (
-  <Link to={slug}>
-    <StyledContainer>
-      <StyledHeader>
+  <StyledContainer>
+    <StyledHeader>
+      <Link to={slug}>
         <StyledTitle>{title}</StyledTitle>
-        <StyledSmallDescription>
-          May 14, 2019 • 6 min read
-        </StyledSmallDescription>
-      </StyledHeader>
-      <StyledDescription>{subtitle}</StyledDescription>
-    </StyledContainer>
-  </Link>
+      </Link>
+      <StyledSmallDescription>May 14, 2019 • 6 min read</StyledSmallDescription>
+    </StyledHeader>
+    <StyledDescription>{subtitle}</StyledDescription>
+  </StyledContainer>
 );
 
 BlogPostCard.propTypes = {
