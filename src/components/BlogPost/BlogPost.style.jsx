@@ -21,6 +21,8 @@ export const StyledDescription = styled.p`
 `;
 
 export const StyledPostContent = styled.div`
+  padding-bottom: ${grid * 4}px;
+
   /*
     Articles are stored in the database as richtext
     Richtext is being transpiled to HTML
@@ -51,4 +53,10 @@ export const StyledPostContent = styled.div`
     border-radius: 12px;
     margin: ${grid * 2}px auto;
   }
+`;
+
+export const StyledBioContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
 `;

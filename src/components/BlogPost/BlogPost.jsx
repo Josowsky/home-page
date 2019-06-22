@@ -2,12 +2,15 @@ import React from 'react';
 import { shape, string } from 'prop-types';
 import { graphql } from 'gatsby';
 
+import Bio from 'components/Bio/Bio';
+
 import {
   StyledContainer,
   StyledHeader,
   StyledTitle,
   StyledDescription,
   StyledPostContent,
+  StyledBioContainer,
 } from './BlogPost.style';
 
 const BlogPost = ({ data: { contentfulPost: post } }) => (
@@ -21,6 +24,9 @@ const BlogPost = ({ data: { contentfulPost: post } }) => (
         __html: post.content.childContentfulRichText.html,
       }}
     />
+    <StyledBioContainer>
+      <Bio />
+    </StyledBioContainer>
   </StyledContainer>
 );
 
