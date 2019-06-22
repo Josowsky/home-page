@@ -2,6 +2,8 @@ import React from 'react';
 import { shape, string } from 'prop-types';
 import { graphql } from 'gatsby';
 
+import { getBlogFormatDate } from 'shared/utils/getBlogFormatDate';
+
 import Bio from 'components/Bio/Bio';
 
 import {
@@ -17,7 +19,9 @@ const BlogPost = ({ data: { contentfulPost: post } }) => (
   <StyledContainer>
     <StyledHeader>
       <StyledTitle>{post.title}</StyledTitle>
-      <StyledDescription>May 14, 2019 • 6 min read</StyledDescription>
+      <StyledDescription>
+        {getBlogFormatDate(post.createdAt)} • 6 min read
+      </StyledDescription>
     </StyledHeader>
     <StyledPostContent
       dangerouslySetInnerHTML={{
@@ -34,6 +38,7 @@ BlogPost.propTypes = {
   data: shape({
     contentfulPost: shape({
       title: string.isRequired,
+      createdAt: string.isRequired,
       content: shape({
         childContentfulRichText: shape({ html: string.isRequired }).isRequired,
       }).isRequired,
@@ -47,6 +52,7 @@ export const pageQuery = graphql`
   query ContentfulBlogPostById($id: String!) {
     contentfulPost(id: { eq: $id }) {
       title
+      createdAt
       content {
         childContentfulRichText {
           html
