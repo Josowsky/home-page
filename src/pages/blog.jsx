@@ -13,14 +13,11 @@ import { StyledContainer, StyledBioContainer } from './blog.style';
 const MainPage = ({
   data: {
     allContentfulPost: { edges: posts },
-    file: {
-      childImageSharp: { fixed: avatar },
-    },
   },
 }) => (
   <StyledContainer>
     <StyledBioContainer>
-      <Bio avatar={avatar} />
+      <Bio />
     </StyledBioContainer>
     <div>
       {posts.map(({ node: { id, title, description } }) => (
@@ -52,11 +49,6 @@ MainPage.propTypes = {
         })
       ),
     }),
-    file: shape({
-      childImageSharp: shape({
-        fixed: shape({}),
-      }),
-    }),
   }).isRequired,
 };
 
@@ -70,13 +62,6 @@ export const pageQuery = graphql`
           id
           title
           description
-        }
-      }
-    }
-    file(absolutePath: { regex: "/avatar/" }) {
-      childImageSharp {
-        fixed(height: 90, width: 90) {
-          ...GatsbyImageSharpFixed
         }
       }
     }
