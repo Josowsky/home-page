@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 import { grid, fontWeightBold } from 'shared/constants';
 
@@ -18,6 +19,12 @@ export const StyledTitle = styled.h1`
 
 export const StyledDescription = styled.p`
   font-size: 16px;
+`;
+
+export const StyledPostImage = styled(Img)`
+  max-width: 565px;
+  border-radius: 12px;
+  margin: ${grid * 2}px auto;
 `;
 
 export const StyledPostContent = styled.div`

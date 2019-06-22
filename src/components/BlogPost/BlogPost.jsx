@@ -11,6 +11,7 @@ import {
   StyledHeader,
   StyledTitle,
   StyledDescription,
+  StyledPostImage,
   StyledPostContent,
   StyledBioContainer,
 } from './BlogPost.style';
@@ -22,6 +23,7 @@ const BlogPost = ({ data: { contentfulPost: post } }) => (
       <StyledDescription>
         {getBlogFormatDate(post.createdAt)} • 6 min read
       </StyledDescription>
+      <StyledPostImage sizes={post.image.sizes} />
     </StyledHeader>
     <StyledPostContent
       dangerouslySetInnerHTML={{
@@ -39,6 +41,9 @@ BlogPost.propTypes = {
     contentfulPost: shape({
       title: string.isRequired,
       createdAt: string.isRequired,
+      image: shape({
+        sizes: shape({}),
+      }),
       content: shape({
         childContentfulRichText: shape({ html: string.isRequired }).isRequired,
       }).isRequired,
@@ -53,6 +58,11 @@ export const pageQuery = graphql`
     contentfulPost(id: { eq: $id }) {
       title
       createdAt
+      image {
+        sizes(maxWidth: 565) {
+          ...GatsbyContentfulSizes
+        }
+      }
       content {
         childContentfulRichText {
           html
