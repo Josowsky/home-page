@@ -2,8 +2,6 @@ import React from 'react';
 import { func, oneOfType, node, bool } from 'prop-types';
 import { Location } from '@reach/router';
 
-import { routes } from 'shared/constants';
-
 import Menu from 'components/Menu/Menu';
 import MobileSideBar from 'components/MobileSideBar/MobileSideBar';
 import Sidebar from 'components/Sidebar/Sidebar';
@@ -57,7 +55,7 @@ Layout.propTypes = {
 export default props => (
   <Location>
     {({ location }) => {
-      const isBlog = location.pathname.replace(/\/$/, '') === routes.blog;
+      const isBlog = /^\/blog\/*/g.test(location.pathname);
 
       return <Layout {...props} isBlog={isBlog} />;
     }}
