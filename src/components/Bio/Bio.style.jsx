@@ -5,6 +5,7 @@ import { colorGrey, grid } from 'shared/constants';
 
 export const StyledContainer = styled.section`
   display: flex;
+  align-items: center;
   max-width: 500px;
 `;
 
