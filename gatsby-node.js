@@ -10,7 +10,7 @@ exports.createPages = ({ graphql, actions }) => {
         allContentfulPost {
           edges {
             node {
-              slug
+              id
               title
             }
           }
@@ -22,15 +22,18 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors;
     }
 
-    // Create blog posts pages.
-    const posts = result.data.allContentfulPost.edges;
+    const {
+      data: {
+        allContentfulPost: { edges: posts },
+      },
+    } = result;
 
-    posts.forEach(post => {
+    posts.forEach(({ node: { id, title } }) => {
       createPage({
-        path: post.node.slug,
+        path: `blog/${encodeURIComponent(title.split(' ').join('-'))}`,
         component: blogPost,
         context: {
-          slug: post.node.slug,
+          id,
         },
       });
     });

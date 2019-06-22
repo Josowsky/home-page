@@ -10,22 +10,22 @@ import {
   StyledDescription,
 } from './BlogPostCard.style';
 
-const BlogPostCard = ({ title, subtitle, slug }) => (
+const BlogPostCard = ({ title, description, path }) => (
   <StyledContainer>
     <StyledHeader>
-      <Link to={slug}>
+      <Link to={path}>
         <StyledTitle>{title}</StyledTitle>
       </Link>
       <StyledSmallDescription>May 14, 2019 • 6 min read</StyledSmallDescription>
     </StyledHeader>
-    <StyledDescription>{subtitle}</StyledDescription>
+    <StyledDescription>{description}</StyledDescription>
   </StyledContainer>
 );
 
 BlogPostCard.propTypes = {
   title: string.isRequired,
-  subtitle: string.isRequired,
-  slug: string.isRequired,
+  description: string.isRequired,
+  path: string.isRequired,
 };
 
 export default BlogPostCard;

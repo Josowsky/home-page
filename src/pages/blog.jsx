@@ -2,6 +2,8 @@ import React from 'react';
 import { arrayOf, shape, string } from 'prop-types';
 import { graphql } from 'gatsby';
 
+import { getUrlPath } from 'shared/utils/getUrlPath';
+
 import Bio from 'components/Bio/Bio';
 import BlogPostCard from 'components/BlogPostCard/BlogPostCard';
 import SEO from 'components/SEO/SEO';
@@ -21,12 +23,12 @@ const MainPage = ({
       <Bio avatar={avatar} />
     </StyledBioContainer>
     <div>
-      {posts.map(({ node }) => (
+      {posts.map(({ node: { id, title, description } }) => (
         <BlogPostCard
-          key={node.slug}
-          title={node.title}
-          subtitle={node.subtitle}
-          slug={node.slug}
+          key={id}
+          title={title}
+          description={description}
+          path={`/blog/${getUrlPath(title)}`}
         />
       ))}
     </div>
@@ -44,8 +46,8 @@ MainPage.propTypes = {
         shape({
           node: shape({
             title: string,
-            subtitle: string,
-            slug: string,
+            description: string,
+            id: string,
           }),
         })
       ),
@@ -65,9 +67,9 @@ export const pageQuery = graphql`
     allContentfulPost {
       edges {
         node {
+          id
           title
-          subtitle
-          slug
+          description
         }
       }
     }

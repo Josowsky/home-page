@@ -37,8 +37,8 @@ BlogPost.propTypes = {
 export default BlogPost;
 
 export const pageQuery = graphql`
-  query ContentfulBlogPostBySlug($slug: String!) {
-    contentfulPost(slug: { eq: $slug }) {
+  query ContentfulBlogPostById($id: String!) {
+    contentfulPost(id: { eq: $id }) {
       title
       content {
         childContentfulRichText {
