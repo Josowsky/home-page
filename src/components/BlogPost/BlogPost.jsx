@@ -7,6 +7,7 @@ import {
   StyledHeader,
   StyledTitle,
   StyledDescription,
+  StyledPostContent,
 } from './BlogPost.style';
 
 const BlogPost = ({ data: { contentfulPost: post } }) => (
@@ -15,7 +16,7 @@ const BlogPost = ({ data: { contentfulPost: post } }) => (
       <StyledTitle>{post.title}</StyledTitle>
       <StyledDescription>May 14, 2019 • 6 min read</StyledDescription>
     </StyledHeader>
-    <div
+    <StyledPostContent
       dangerouslySetInnerHTML={{
         __html: post.content.childContentfulRichText.html,
       }}
