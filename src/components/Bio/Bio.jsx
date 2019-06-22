@@ -1,6 +1,11 @@
 import React from 'react';
+import { oneOf } from 'prop-types';
 import { Link } from '@reach/router';
 import { graphql, StaticQuery } from 'gatsby';
+
+import { routes } from 'shared/constants';
+
+import BioLink from './BioLink/BioLink';
 
 import {
   StyledContainer,
@@ -10,7 +15,7 @@ import {
   StyledAvatar,
 } from './Bio.style';
 
-const Bio = () => (
+const Bio = ({ variant = 'default' }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -30,7 +35,12 @@ const Bio = () => (
     }) => (
       <StyledContainer>
         <StyledInfoContainer>
-          <StyledHeader>Blog</StyledHeader>
+          {variant === 'default' && <StyledHeader>Blog</StyledHeader>}
+          {variant === 'withLink' && (
+            <BioLink title="Blog" path={routes.blog}>
+              Blog
+            </BioLink>
+          )}
           <StyledDescription>
             Personal blog by{' '}
             <Link to="/" title="Home page">
@@ -44,5 +54,9 @@ const Bio = () => (
     )}
   />
 );
+
+Bio.propTypes = {
+  variant: oneOf(['default', 'withLink']),
+};
 
 export default Bio;

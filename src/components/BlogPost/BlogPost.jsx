@@ -31,7 +31,7 @@ const BlogPost = ({ data: { contentfulPost: post } }) => (
       }}
     />
     <StyledBioContainer>
-      <Bio />
+      <Bio variant="withLink" />
     </StyledBioContainer>
   </StyledContainer>
 );
