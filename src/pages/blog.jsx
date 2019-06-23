@@ -3,7 +3,7 @@ import { arrayOf, shape, string, number } from 'prop-types';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
-import { grid } from 'shared/constants/constants.style';
+import { grid, mobileBreakpoint } from 'shared/constants/constants.style';
 import { getBlogFormatDate } from 'shared/utils/getBlogFormatDate';
 import { getUrlPath } from 'shared/utils/getUrlPath';
 
@@ -18,10 +18,14 @@ export const StyledContainer = styled.div`
 `;
 
 export const StyledBioContainer = styled.div`
-  margin-bottom: ${grid * 5}px;
+  margin-bottom: ${grid * 3}px;
   width: 100%;
   display: flex;
   justify-content: center;
+
+  @media (min-width: ${mobileBreakpoint}px) {
+    margin-bottom: ${grid * 5}px;
+  }
 `;
 
 const MainPage = ({

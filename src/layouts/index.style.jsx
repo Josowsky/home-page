@@ -8,6 +8,7 @@ import {
 
 export const StyledContainer = styled.div`
   display: flex;
+  flex-direction: column;
   position: relative;
   width: 100vw;
   height: 100%;
@@ -64,6 +65,10 @@ export const StyledPageContent = styled.main`
 `;
 
 export const StyledBlogContent = styled.main`
-  width: 600px;
-  margin: ${grid * 3}px auto ${grid}px auto;
+  max-width: 600px;
+  margin: ${grid}px auto;
+
+  @media (min-width: ${mobileBreakpoint}px) {
+    margin: ${grid * 3}px auto ${grid}px auto;
+  }
 `;

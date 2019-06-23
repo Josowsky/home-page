@@ -1,20 +1,36 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-import { grid, fontWeightBold } from 'shared/constants/constants.style';
+import {
+  grid,
+  fontWeightBold,
+  mobileBreakpoint,
+} from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.article`
-  padding-bottom: ${grid * 4}px;
+  padding-bottom: ${grid}px;
+
+  @media (min-width: ${mobileBreakpoint}px) {
+    padding-bottom: ${grid * 4}px;
+  }
 `;
 
 export const StyledHeader = styled.header`
-  margin-bottom: ${grid * 4}px;
+  margin-bottom: ${grid * 2}px;
+
+  @media (min-width: ${mobileBreakpoint}px) {
+    margin-bottom: ${grid * 4}px;
+  }
 `;
 
 export const StyledTitle = styled.h1`
-  font-size: 32px;
+  font-size: 24px;
   font-weight: ${fontWeightBold};
   margin-bottom: ${grid}px;
+
+  @media (min-width: ${mobileBreakpoint}px) {
+    font-size: 32px;
+  }
 `;
 
 export const StyledDescription = styled.p`

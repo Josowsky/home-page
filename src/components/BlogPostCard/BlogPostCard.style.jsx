@@ -12,7 +12,10 @@ export const StyledContainer = styled.article`
   border: 1px rgba(119, 119, 119, 0.2) solid;
   box-shadow: 0 4px 4px rgba(119, 119, 119, 0.15);
   border-radius: 12px;
-  margin-bottom: ${grid * 2.5}px;
+
+  &:not(:last-child) {
+    margin-bottom: ${grid * 2.5}px;
+  }
 `;
 
 export const StyledHeader = styled.header`

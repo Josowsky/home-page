@@ -3,14 +3,10 @@ import styled from 'styled-components';
 import { colorBlue, grid } from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.footer`
-  position: absolute;
-  bottom: ${grid * 2}px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: center;
+  margin: auto auto 0 auto;
 `;
 
 export const StyledTitle = styled.p`
