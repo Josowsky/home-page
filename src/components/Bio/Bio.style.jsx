@@ -39,6 +39,6 @@ export const StyledAvatar = styled(Img)`
   display: none !important; /* Overwrite gatsby-image style */
 
   @media (min-width: ${mobileBreakpoint}px) {
-    display: block;
+    display: block !important;
   }
 `;
