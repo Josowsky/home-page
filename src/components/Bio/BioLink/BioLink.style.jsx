@@ -17,7 +17,7 @@ export const StyledContainer = styled.div`
     background-color: ${colorBlue};
     opacity: 0.8;
     position: absolute;
-    bottom: -2px;
+    bottom: -4px;
     left: 0;
     transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
     will-change: transform;
