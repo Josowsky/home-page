@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-import { colorGrey, grid } from 'shared/constants/constants.style';
+import {
+  colorGrey,
+  grid,
+  mobileBreakpoint,
+} from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.section`
   display: flex;
@@ -11,7 +15,10 @@ export const StyledContainer = styled.section`
 
 export const StyledInfoContainer = styled.div`
   max-width: 300px;
-  margin-right: ${grid * 4}px;
+
+  @media (min-width: ${mobileBreakpoint}px) {
+    margin-right: ${grid * 4}px;
+  }
 `;
 
 export const StyledHeader = styled.h1`
@@ -25,6 +32,13 @@ export const StyledDescription = styled.p`
 `;
 
 export const StyledAvatar = styled(Img)`
+  height: 90px;
+  width: 90px;
   border-radius: 50%;
   box-shadow: 0px 0px 6px rgba(0, 172, 201, 0.6);
+  display: none !important; /* Overwrite gatsby-image style */
+
+  @media (min-width: ${mobileBreakpoint}px) {
+    display: block;
+  }
 `;
