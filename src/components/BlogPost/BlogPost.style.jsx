@@ -11,7 +11,7 @@ export const StyledContainer = styled.article`
   padding-bottom: ${grid}px;
 
   @media (min-width: ${mobileBreakpoint}px) {
-    padding-bottom: ${grid * 4}px;
+    padding-bottom: ${grid * 3}px;
   }
 `;
 
