@@ -26,7 +26,6 @@ const Layout = ({ children, isBlog }) => {
           <StyledBlogContent>{children}</StyledBlogContent>
           <SimpleFooter />
         </WithBorders>
-        <MobileSideBar />
       </StyledContainer>
     );
 
