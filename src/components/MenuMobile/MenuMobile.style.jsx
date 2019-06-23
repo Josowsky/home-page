@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 
-import { grid } from 'shared/constants';
+import { grid } from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.div`
   display: flex;

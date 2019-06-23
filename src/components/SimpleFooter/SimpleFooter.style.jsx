@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colorBlue, grid } from 'shared/constants';
+import { colorBlue, grid } from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.footer`
   position: absolute;

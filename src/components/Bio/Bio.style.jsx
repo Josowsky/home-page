@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-import { colorGrey, grid } from 'shared/constants';
+import { colorGrey, grid } from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.section`
   display: flex;

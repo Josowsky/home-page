@@ -1,7 +1,7 @@
 import React from 'react';
 import SEO from 'components/SEO/SEO';
 
-import { routes } from 'shared/constants';
+import { routes } from 'shared/constants/constants';
 
 import {
   StyledContainer,

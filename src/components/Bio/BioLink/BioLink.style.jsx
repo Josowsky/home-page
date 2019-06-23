@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { FaLongArrowAltLeft } from 'react-icons/fa';
 
-import { colorBlue, grid } from 'shared/constants';
+import { colorBlue, grid } from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.div`
   position: relative;

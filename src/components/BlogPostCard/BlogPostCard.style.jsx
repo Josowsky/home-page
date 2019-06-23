@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
-import { colorBlue, colorGrey, fontWeightBold, grid } from 'shared/constants';
+import {
+  colorBlue,
+  colorGrey,
+  fontWeightBold,
+  grid,
+} from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.article`
   padding: ${grid * 2}px;

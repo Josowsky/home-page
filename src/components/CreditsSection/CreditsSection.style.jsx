@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { FaCoffee, FaHeart } from 'react-icons/fa';
 
-import { colorGreyLight } from 'shared/constants';
+import { colorGreyLight } from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.div`
   color: ${colorGreyLight};

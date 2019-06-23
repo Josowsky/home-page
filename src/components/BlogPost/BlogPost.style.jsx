@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-import { grid, fontWeightBold } from 'shared/constants';
+import { grid, fontWeightBold } from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.article`
   padding-bottom: ${grid * 4}px;

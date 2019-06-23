@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { grid } from 'shared/constants';
+import { grid } from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.div`
   width: 100%;

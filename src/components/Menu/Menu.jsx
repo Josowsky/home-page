@@ -2,7 +2,7 @@ import React from 'react';
 import { shape, string } from 'prop-types';
 import { Location } from '@reach/router';
 
-import { menuItems } from 'shared/constants';
+import { menuItems } from 'shared/constants/constants';
 
 import { StyledContainer, StyledMenuItem } from './Menu.style';
 

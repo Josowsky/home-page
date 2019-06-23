@@ -3,7 +3,7 @@ import { oneOf } from 'prop-types';
 import { Link } from '@reach/router';
 import { graphql, StaticQuery } from 'gatsby';
 
-import { routes } from 'shared/constants';
+import { routes } from 'shared/constants/constants';
 
 import BioLink from './BioLink/BioLink';
 

@@ -2,7 +2,12 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import Button from 'components/Button/Button';
 
-import { colorBlue, colorGrey, grid, mobileBreakpoint } from 'shared/constants';
+import {
+  colorBlue,
+  colorGrey,
+  grid,
+  mobileBreakpoint,
+} from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.div`
   margin-top: 120px;

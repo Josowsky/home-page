@@ -5,7 +5,7 @@ import {
   colorGrey,
   fontWeightNormal,
   mobileBreakpoint,
-} from 'shared/constants';
+} from 'shared/constants/constants.style';
 
 export default createGlobalStyle`
   body {

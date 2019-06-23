@@ -3,7 +3,7 @@ import { shape } from 'prop-types';
 import { graphql } from 'gatsby';
 import SEO from 'components/SEO/SEO';
 
-import { routes } from 'shared/constants';
+import { routes } from 'shared/constants/constants';
 
 import {
   StyledContainer,

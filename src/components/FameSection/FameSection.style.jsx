@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-import { colorBlue, colorGreyLight, grid } from 'shared/constants';
+import {
+  colorBlue,
+  colorGreyLight,
+  grid,
+} from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.div`
   display: flex;

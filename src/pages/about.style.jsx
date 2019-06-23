@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Button from 'components/Button/Button';
 
-import { grid, mobileBreakpoint } from 'shared/constants';
+import { grid, mobileBreakpoint } from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.div`
   width: 100%;

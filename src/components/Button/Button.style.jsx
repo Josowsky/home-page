@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-import { colorBlue, fontWeightBold, grid } from 'shared/constants';
+import {
+  colorBlue,
+  fontWeightBold,
+  grid,
+} from 'shared/constants/constants.style';
 
 export const StyledButton = styled(Link)`
   display: block;

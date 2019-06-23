@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-import { colorBlue, fontWeightBold, grid } from 'shared/constants';
+import {
+  colorBlue,
+  fontWeightBold,
+  grid,
+} from 'shared/constants/constants.style';
 
 export const HeadingLarge = styled.h1`
   font-size: 24px;

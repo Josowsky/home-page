@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
-import { colorBlue, colorGrey, grid, mobileBreakpoint } from 'shared/constants';
+import {
+  colorBlue,
+  colorGrey,
+  grid,
+  mobileBreakpoint,
+} from 'shared/constants/constants.style';
 
 export const StyledDateContainer = styled.div`
   display: flex;
