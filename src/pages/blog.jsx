@@ -1,5 +1,5 @@
 import React from 'react';
-import { arrayOf, shape, string } from 'prop-types';
+import { arrayOf, shape, string, number } from 'prop-types';
 import { graphql } from 'gatsby';
 
 import { getBlogFormatDate } from 'shared/utils/getBlogFormatDate';
@@ -21,15 +21,18 @@ const MainPage = ({
       <Bio />
     </StyledBioContainer>
     <div>
-      {posts.map(({ node: { id, title, description, createdAt } }) => (
-        <BlogPostCard
-          key={id}
-          title={title}
-          description={description}
-          smallDescription={`${getBlogFormatDate(createdAt)} • 6 min read`}
-          path={`/blog/${getUrlPath(title)}`}
-        />
-      ))}
+      {posts.map(
+        ({ node: { id, title, description, createdAt, readingTime } }) => (
+          <BlogPostCard
+            key={id}
+            title={title}
+            description={description}
+            smallDescription={`${getBlogFormatDate(createdAt)}${readingTime &&
+              ` • ${readingTime} min read`}`}
+            path={`/blog/${getUrlPath(title)}`}
+          />
+        )
+      )}
     </div>
     <SEO
       title="Blog"
@@ -48,6 +51,7 @@ MainPage.propTypes = {
             description: string,
             id: string,
             createdAt: string,
+            readingTime: number,
           }),
         })
       ),
@@ -66,6 +70,7 @@ export const pageQuery = graphql`
           title
           description
           createdAt
+          readingTime
         }
       }
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { shape, string } from 'prop-types';
+import { shape, string, number } from 'prop-types';
 import { graphql } from 'gatsby';
 
 import { getBlogFormatDate } from 'shared/utils/getBlogFormatDate';
@@ -22,7 +22,8 @@ const BlogPost = ({ data: { contentfulPost: post } }) => (
     <StyledHeader>
       <StyledTitle>{post.title}</StyledTitle>
       <StyledDescription>
-        {getBlogFormatDate(post.createdAt)} • 6 min read
+        {getBlogFormatDate(post.createdAt)}
+        {post.readingTime && ` • ${post.readingTime} min read`}
       </StyledDescription>
       <StyledPostImage sizes={post.image.sizes} />
     </StyledHeader>
@@ -44,6 +45,7 @@ BlogPost.propTypes = {
       title: string.isRequired,
       description: string.isRequired,
       createdAt: string.isRequired,
+      readingTime: number,
       image: shape({
         sizes: shape({}),
       }),
@@ -62,6 +64,7 @@ export const pageQuery = graphql`
       title
       description
       createdAt
+      readingTime
       image {
         sizes(maxWidth: 565) {
           ...GatsbyContentfulSizes
