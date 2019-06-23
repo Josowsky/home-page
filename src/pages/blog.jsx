@@ -1,7 +1,9 @@
 import React from 'react';
 import { arrayOf, shape, string, number } from 'prop-types';
 import { graphql } from 'gatsby';
+import styled from 'styled-components';
 
+import { grid } from 'shared/constants/constants.style';
 import { getBlogFormatDate } from 'shared/utils/getBlogFormatDate';
 import { getUrlPath } from 'shared/utils/getUrlPath';
 
@@ -9,7 +11,18 @@ import Bio from 'components/Bio/Bio';
 import BlogPostCard from 'components/BlogPostCard/BlogPostCard';
 import SEO from 'components/SEO/SEO';
 
-import { StyledContainer, StyledBioContainer } from './blog.style';
+export const StyledContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  max-width: 730px;
+`;
+
+export const StyledBioContainer = styled.div`
+  margin-bottom: ${grid * 5}px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
 
 const MainPage = ({
   data: {
