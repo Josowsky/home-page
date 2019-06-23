@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import { getBlogFormatDate } from 'shared/utils/getBlogFormatDate';
 
 import Bio from 'components/Bio/Bio';
+import SEO from 'components/SEO/SEO';
 
 import {
   StyledContainer,
@@ -33,6 +34,7 @@ const BlogPost = ({ data: { contentfulPost: post } }) => (
     <StyledBioContainer>
       <Bio variant="withLink" />
     </StyledBioContainer>
+    <SEO title={`${post.title} - Blog`} description={post.description} />
   </StyledContainer>
 );
 
@@ -40,6 +42,7 @@ BlogPost.propTypes = {
   data: shape({
     contentfulPost: shape({
       title: string.isRequired,
+      description: string.isRequired,
       createdAt: string.isRequired,
       image: shape({
         sizes: shape({}),
@@ -57,6 +60,7 @@ export const pageQuery = graphql`
   query ContentfulBlogPostById($id: String!) {
     contentfulPost(id: { eq: $id }) {
       title
+      description
       createdAt
       image {
         sizes(maxWidth: 565) {
