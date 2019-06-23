@@ -1,17 +1,58 @@
 import React from 'react';
-import SEO from 'components/SEO/SEO';
+import styled from 'styled-components';
 
 import { routes } from 'shared/constants/constants';
+import { grid, mobileBreakpoint } from 'shared/constants/constants.style';
 
-import {
-  StyledContainer,
-  StyledHeader,
-  StyledParagraph,
-  StyledButtons,
-  StyledButton,
-} from './about.style';
+import Button from 'components/Button/Button';
+import SEO from 'components/SEO/SEO';
 
-const MainPage = () => (
+const StyledContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  max-width: 730px;
+`;
+
+const StyledHeader = styled.h2`
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: ${grid * 3}px;
+  margin-bottom: ${grid * 2}px;
+
+  @media (min-width: ${mobileBreakpoint}px) {
+    margin-top: ${grid * 6}px;
+    font-size: 32px;
+  }
+`;
+
+const StyledParagraph = styled.div`
+  font-size: 16px;
+  margin-bottom: ${grid}px;
+  text-align: left;
+
+  @media (min-width: ${mobileBreakpoint}px) {
+    font-size: 24px;
+    margin-bottom: ${grid * 1.5}px;
+  }
+`;
+
+const StyledButtons = styled.div`
+  display: flex;
+  justify-content: stretch;
+  margin: ${grid * 2}px auto 0 auto;
+  width: 60%;
+
+  @media (min-width: ${mobileBreakpoint}px) {
+    width: 200px;
+  }
+`;
+
+const StyledButton = styled(Button)`
+  flex: 1 1 0%;
+  margin: ${grid}px;
+`;
+
+const AboutPage = () => (
   <StyledContainer>
     <StyledHeader>About me</StyledHeader>
     <StyledParagraph>
@@ -40,4 +81,4 @@ const MainPage = () => (
   </StyledContainer>
 );
 
-export default MainPage;
+export default AboutPage;
