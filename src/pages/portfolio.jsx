@@ -39,13 +39,22 @@ const PortfolioPage = ({ data }) => {
       id: 1,
       date: '2018 - 2019',
       description:
-        'Accounting application for one of the biggest banks in Germany. It allows users to create and send invoices, connect bank accounts, make payments and export data for tax consultant.',
+        'Accounting application for a German bank. It allows users to create and send invoices, connect bank accounts, make payments and export data for tax consultant.',
       image: data.smartguide,
       name: 'VR SmartGuide',
       techStack: ['React', 'Redux', 'Cypress', 'TypeScript', 'Webpack'],
     },
     {
       id: 2,
+      date: '2018',
+      description:
+        'Mobile focused web app for browsing move showings in many theatres in Poznań. I was leading the team of two other developers.',
+      image: data.gdziekino,
+      name: 'Gdzie Kino',
+      techStack: ['React', 'Redux', 'Rxjs', 'Node.js', 'Puppeteer', 'Heroku'],
+    },
+    {
+      id: 3,
       date: '2017 - 2018',
       description:
         'Cryptocurrency exchange with support for tens of currencies including cryptocurrencies and fiat (PLN, USD, EUR). Application allowed users to trade their currencies and see charts in real time.',
@@ -61,7 +70,7 @@ const PortfolioPage = ({ data }) => {
       ],
     },
     {
-      id: 3,
+      id: 4,
       date: '2017',
       description:
         'CS:GO items trading platform. It allowed users to connect their Steam account and trade items.',
@@ -103,6 +112,13 @@ PortfolioPage.propTypes = {
 export const query = graphql`
   query {
     smartguide: file(absolutePath: { regex: "/project-smartguide/" }) {
+      childImageSharp {
+        fluid(maxWidth: 420, maxHeight: 300, cropFocus: WEST) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    gdziekino: file(absolutePath: { regex: "/project-gdziekino/" }) {
       childImageSharp {
         fluid(maxWidth: 420, maxHeight: 300, cropFocus: WEST) {
           ...GatsbyImageSharpFluid
