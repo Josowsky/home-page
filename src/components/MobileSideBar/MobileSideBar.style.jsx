@@ -4,13 +4,13 @@ import BackgroundImage from 'gatsby-background-image';
 import {
   colorBlue,
   grid,
-  mobileBreakpoint,
+  tabletBreakpoint,
 } from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.div`
   position: absolute;
 
-  @media (min-width: ${mobileBreakpoint}px) {
+  @media (min-width: ${tabletBreakpoint}px) {
     display: none;
   }
 `;

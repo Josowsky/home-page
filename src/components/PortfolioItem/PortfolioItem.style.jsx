@@ -4,7 +4,7 @@ import {
   colorBlue,
   colorGrey,
   grid,
-  mobileBreakpoint,
+  tabletBreakpoint,
 } from 'shared/constants/constants.style';
 
 export const StyledDateContainer = styled.div`
@@ -14,7 +14,7 @@ export const StyledDateContainer = styled.div`
   margin-top: ${grid * 2}px;
   margin-bottom: ${grid};
 
-  @media (min-width: ${mobileBreakpoint}px) {
+  @media (min-width: ${tabletBreakpoint}px) {
     margin-bottom: ${grid * 1.5}px;
   }
 `;
@@ -24,7 +24,7 @@ export const StyledDate = styled.div`
   font-size: 12px;
   margin-right: ${grid * 0.5}px;
 
-  @media (min-width: ${mobileBreakpoint}px) {
+  @media (min-width: ${tabletBreakpoint}px) {
     font-size: 16px;
     margin-right: ${grid}px;
   }
@@ -40,7 +40,7 @@ export const StyledDateLine = styled.div`
 export const StyledBoxesContainer = styled.div`
   display: block;
 
-  @media (min-width: ${mobileBreakpoint}px) {
+  @media (min-width: ${tabletBreakpoint}px) {
     font-size: 16px;
     display: flex;
   }

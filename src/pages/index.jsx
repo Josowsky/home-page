@@ -9,7 +9,7 @@ import {
   colorBlue,
   colorGrey,
   grid,
-  mobileBreakpoint,
+  tabletBreakpoint,
 } from 'shared/constants/constants.style';
 
 import Button from 'components/Button/Button';
@@ -21,7 +21,7 @@ const StyledContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media (min-width: ${mobileBreakpoint}px) {
+  @media (min-width: ${tabletBreakpoint}px) {
     margin-top: 200px;
   }
 `;
@@ -29,7 +29,7 @@ const StyledContainer = styled.div`
 const StyledAvatarContainer = styled.div`
   margin-bottom: ${grid * 1.5}px;
 
-  @media (min-width: ${mobileBreakpoint}px) {
+  @media (min-width: ${tabletBreakpoint}px) {
     display: none;
   }
 `;
@@ -46,7 +46,7 @@ const StyledHeader = styled.h1`
   color: ${colorGrey};
   text-align: justify;
 
-  @media (min-width: ${mobileBreakpoint}px) {
+  @media (min-width: ${tabletBreakpoint}px) {
     font-size: 32px;
     text-align: center;
   }
@@ -58,7 +58,7 @@ const StyledButtons = styled.div`
   margin-top: ${grid * 2}px;
   width: 100%;
 
-  @media (min-width: ${mobileBreakpoint}px) {
+  @media (min-width: ${tabletBreakpoint}px) {
     margin-top: ${grid * 3}px;
     width: 400px;
   }
@@ -68,7 +68,7 @@ const StyledButton = styled(Button)`
   flex: 1 1 0%;
   margin: ${grid}px;
 
-  @media (min-width: ${mobileBreakpoint}px) {
+  @media (min-width: ${tabletBreakpoint}px) {
     font-size: 18px;
   }
 `;
