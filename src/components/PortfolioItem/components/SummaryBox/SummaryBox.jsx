@@ -9,7 +9,11 @@ import {
   StyledTechStackHeader,
 } from './SummaryBox.style';
 
-const SummaryBox = ({ projectDescription, projectName, projectTechStack }) => (
+const SummaryBox = ({
+  projectDescription,
+  projectName,
+  projectTechStack = [],
+}) => (
   <StyledContainer>
     <StyledHeader>{projectName}</StyledHeader>
     <StyledDescription>{projectDescription}</StyledDescription>
