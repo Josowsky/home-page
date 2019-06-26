@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import BackgroundImage from 'gatsby-background-image';
 
-import { colorBlue, grid, mobileBreakpoint } from 'shared/constants';
+import { colorBlue, grid, tabletBreakpoint } from 'shared/constants';
 
 export const StyledContainer = styled.div`
   position: absolute;
 
-  @media (min-width: ${mobileBreakpoint}px) {
+  @media (min-width: ${tabletBreakpoint}px) {
     display: none;
   }
 `;

@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-import { colorBlue, mobileBreakpoint } from 'shared/constants';
+import { colorBlue, tabletBreakpoint } from 'shared/constants';
 
 const StyledBorder = styled.div`
   display: none;
 
-  @media (min-width: ${mobileBreakpoint}px) {
+  @media (min-width: ${tabletBreakpoint}px) {
     display: block;
     background-color: ${colorBlue};
     position: fixed;

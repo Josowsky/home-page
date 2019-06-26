@@ -35,3 +35,4 @@ export const fontWeightBold = '600';
 export const grid = 16;
 
 export const mobileBreakpoint = 500;
+export const tabletBreakpoint = 900;
