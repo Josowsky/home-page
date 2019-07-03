@@ -4,6 +4,7 @@ import {
   colorBlue,
   grid,
   tabletBreakpoint,
+  mobileBreakpoint,
 } from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.div`

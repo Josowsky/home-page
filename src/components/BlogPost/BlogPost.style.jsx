@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 import {
+  colorBlue,
   grid,
   fontWeightBold,
   mobileBreakpoint,
@@ -75,6 +76,12 @@ export const StyledPostContent = styled.div`
   image {
     border-radius: 12px;
     margin: ${grid * 2}px auto;
+  }
+
+  code {
+    color: #fff;
+    background-color: ${colorBlue};
+    padding: 3px;
   }
 `;
 
