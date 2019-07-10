@@ -2,11 +2,12 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 import {
-  colorBlue,
   grid,
   fontWeightBold,
   mobileBreakpoint,
 } from 'shared/constants/constants.style';
+
+import BlogPostHTML from './components/BlogPostHTML/BlogPostHTML';
 
 export const StyledContainer = styled.article`
   padding-bottom: ${grid}px;
@@ -44,45 +45,8 @@ export const StyledPostImage = styled(Img)`
   margin: ${grid * 2}px auto;
 `;
 
-export const StyledPostContent = styled.div`
+export const StyledPostContent = styled(BlogPostHTML)`
   padding-bottom: ${grid * 4}px;
-
-  /*
-    Articles are stored in the database as richtext
-    Richtext is being transpiled to HTML
-  */
-  h1 {
-    font-size: 24px;
-    font-weight: ${fontWeightBold};
-    margin: ${grid * 2}px 0;
-  }
-
-  h2 {
-    font-size: 18px;
-    font-weight: ${fontWeightBold};
-    margin: ${grid * 2}px 0;
-  }
-
-  h3 {
-    font-size: 16px;
-    font-weight: ${fontWeightBold};
-    margin: ${grid}px 0;
-  }
-
-  p {
-    margin-bottom: ${grid}px;
-  }
-
-  image {
-    border-radius: 12px;
-    margin: ${grid * 2}px auto;
-  }
-
-  code {
-    color: #fff;
-    background-color: ${colorBlue};
-    padding: 3px;
-  }
 `;
 
 export const StyledBioContainer = styled.div`

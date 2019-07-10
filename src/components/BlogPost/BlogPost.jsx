@@ -27,11 +27,7 @@ const BlogPost = ({ data: { contentfulPost: post } }) => (
       </StyledDescription>
       <StyledPostImage sizes={post.image.sizes} />
     </StyledHeader>
-    <StyledPostContent
-      dangerouslySetInnerHTML={{
-        __html: post.content.childContentfulRichText.html,
-      }}
-    />
+    <StyledPostContent jsonPost={post.content.json} />
     <StyledBioContainer>
       <Bio variant="withLink" />
     </StyledBioContainer>
@@ -50,7 +46,7 @@ BlogPost.propTypes = {
         sizes: shape({}),
       }),
       content: shape({
-        childContentfulRichText: shape({ html: string.isRequired }).isRequired,
+        json: shape({}).isRequired,
       }).isRequired,
     }).isRequired,
   }).isRequired,
@@ -71,9 +67,7 @@ export const pageQuery = graphql`
         }
       }
       content {
-        childContentfulRichText {
-          html
-        }
+        json
       }
     }
   }
