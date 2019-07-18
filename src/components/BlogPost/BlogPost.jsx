@@ -31,7 +31,11 @@ const BlogPost = ({ data: { contentfulPost: post } }) => (
     <StyledBioContainer>
       <Bio variant="withLink" />
     </StyledBioContainer>
-    <SEO title={`${post.title} - Blog`} description={post.description} />
+    <SEO
+      title={`${post.title} - Blog`}
+      description={post.description}
+      imageUrl={post.image.file.url}
+    />
   </StyledContainer>
 );
 
@@ -44,6 +48,7 @@ BlogPost.propTypes = {
       readingTime: number,
       image: shape({
         sizes: shape({}),
+        file: shape({ url: string }),
       }),
       content: shape({
         json: shape({}).isRequired,
@@ -64,6 +69,9 @@ export const pageQuery = graphql`
       image {
         sizes(maxWidth: 565) {
           ...GatsbyContentfulSizes
+        }
+        file {
+          url
         }
       }
       content {
