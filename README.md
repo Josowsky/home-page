@@ -60,8 +60,8 @@ gatsby build ; gatsby serve
 
 ## Production
 
-Blog is live at address:
-[https://www.bartek-jozwowiak.me/blog](https://www.bartek-jozwowiak.me/blog)<br />
+Blog is live at: [https://www.bartek-jozwowiak.me/blog](https://www.bartek-jozwowiak.me/blog)<br />
+Home page is live at: [https://www.bartek-jozwowiak.me](https://www.bartek-jozwowiak.me)
 
 ## TODO
 
