@@ -80,6 +80,7 @@ export const StyledPageContent = styled.main`
 
 export const StyledBlogContent = styled.main`
   max-width: 600px;
+  width: 100%;
   margin: ${grid}px auto;
 
   @media (min-width: ${mobileBreakpoint}px) {
