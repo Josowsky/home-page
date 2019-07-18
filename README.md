@@ -26,7 +26,7 @@ The blog is connected with the API on Contentful. <br/>
 - styled-components
 - Storybook
 
-# Building the project
+## Building the project
 
 The project requires `.env` file with Contentful token and spaceId
 
