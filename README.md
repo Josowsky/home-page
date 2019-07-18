@@ -11,7 +11,7 @@
 
 ## Inspiration
 
-I decided to start this project because I wanted to create my own personal blog. I picked Gatsby because I was intrested in static site generators and React.
+I decided to start this project because I wanted to create my personal blog. I picked Gatsby because I was interested in static site generators and React.
 
 Inspiration for this project came mostly from [personal blog of Dan Abramov](https://overreacted.io/).
 
@@ -28,7 +28,7 @@ The blog is connected with the API on Contentful. <br/>
 
 # Building the project
 
-Project requires `.env` file with Contentful token and spaceId
+The project requires `.env` file with Contentful token and spaceId
 
 ```sh
 touch .env
@@ -39,13 +39,13 @@ CONTENTFUL_SPACE_ID=someID
 CONTENTFUL_ACCESS_TOKEN=someToken
 ```
 
-To start local server run:
+To start the local server run:
 
 ```sh
 gatsby develop
 ```
 
-To create production build run:
+To create a production build run:
 
 ```sh
 gatsby build ; gatsby serve
