@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colorBlue, tabletBreakpoint } from 'shared/constants';
+import { colorBlue, tabletBreakpoint } from 'shared/constants/constants.style';
 
 const StyledBorder = styled.div`
   display: none;

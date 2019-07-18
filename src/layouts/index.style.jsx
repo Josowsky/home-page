@@ -1,17 +1,25 @@
 import styled from 'styled-components';
 
-import { colorBlue, grid, tabletBreakpoint } from 'shared/constants';
+import {
+  colorBlue,
+  grid,
+  tabletBreakpoint,
+  mobileBreakpoint,
+} from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   padding: ${grid}px;
   background-color: #fff;
 
   @media (min-width: ${tabletBreakpoint}px) {
     width: calc(100% - 24px);
-    height: calc(100vh - 24px);
+    min-height: calc(100vh - 24px);
     padding: ${grid * 2}px;
     margin: 12px;
     border-radius: 12px;
@@ -59,14 +67,22 @@ export const StyledSidebar = styled.aside`
   }
 `;
 
-export const StyledContent = styled.div`
+export const StyledPageContent = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   margin: ${grid * 3}px 0 ${grid}px 0;
 
   @media (min-width: ${tabletBreakpoint}px) {
     margin: 80px 22px 28px 545px;
+  }
+`;
+
+export const StyledBlogContent = styled.main`
+  max-width: 600px;
+  margin: ${grid}px auto;
+
+  @media (min-width: ${mobileBreakpoint}px) {
+    margin: ${grid * 3}px auto ${grid}px auto;
   }
 `;

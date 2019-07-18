@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { routes, grid, mobileBreakpoint } from 'shared/constants';
+import { routes } from 'shared/constants/constants';
+import { grid, mobileBreakpoint } from 'shared/constants/constants.style';
 
 import Button from 'components/Button/Button';
 import SEO from 'components/SEO/SEO';

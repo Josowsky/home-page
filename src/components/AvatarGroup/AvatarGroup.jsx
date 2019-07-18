@@ -1,7 +1,7 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
-import { routes } from 'shared/constants';
+import { routes } from 'shared/constants/constants';
 
 import {
   StyledContainer,

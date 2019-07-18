@@ -3,7 +3,7 @@ import { shape } from 'prop-types';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
-import { grid, mobileBreakpoint } from 'shared/constants';
+import { grid, mobileBreakpoint } from 'shared/constants/constants.style';
 
 import PortfolioItem from 'components/PortfolioItem/PortfolioItem';
 import SEO from 'components/SEO/SEO';

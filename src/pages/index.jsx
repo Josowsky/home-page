@@ -4,13 +4,13 @@ import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
+import { routes } from 'shared/constants/constants';
 import {
-  routes,
   colorBlue,
   colorGrey,
   grid,
   tabletBreakpoint,
-} from 'shared/constants';
+} from 'shared/constants/constants.style';
 
 import Button from 'components/Button/Button';
 import SEO from 'components/SEO/SEO';

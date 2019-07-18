@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import BackgroundImage from 'gatsby-background-image';
 
-import { colorBlue, grid, tabletBreakpoint } from 'shared/constants';
+import {
+  colorBlue,
+  grid,
+  tabletBreakpoint,
+} from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.div`
   position: absolute;

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 
-import { colorBlue, grid } from 'shared/constants';
+import { colorBlue, colorGrey, grid } from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.div`
   display: flex;
@@ -11,6 +11,7 @@ export const StyledMenuItem = styled(Link)`
   position: relative;
   margin-left: ${grid}px;
   font-size: 16px;
+  color: ${colorGrey};
 
   ${props =>
     props.isSelected &&

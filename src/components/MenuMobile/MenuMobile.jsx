@@ -3,7 +3,7 @@ import { func, shape, string } from 'prop-types';
 import noop from 'lodash.noop';
 import { Location } from '@reach/router';
 
-import { menuItems } from 'shared/constants';
+import { menuItems } from 'shared/constants/constants';
 
 import { StyledContainer, StyledMenuItem } from './MenuMobile.style';
 

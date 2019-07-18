@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-import { mobileBreakpoint } from 'shared/constants';
+import { mobileBreakpoint } from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.div`
   border: 1px rgba(119, 119, 119, 0.2) solid;

@@ -5,7 +5,7 @@ import {
   fontWeightBold,
   grid,
   mobileBreakpoint,
-} from 'shared/constants';
+} from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.div`
   padding: ${grid * 1.5}px;

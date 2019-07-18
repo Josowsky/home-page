@@ -11,6 +11,7 @@ const SEO = ({ title = '', description = '' }) => (
     {description && <meta property="og:description" content={description} />}
     {title && <meta name="twitter:title" content={title} />}
     {description && <meta name="twitter:description" content={description} />}
+    <html lang="en" />
   </Helmet>
 );
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import BackgroundImage from 'gatsby-background-image';
 
-import { grid } from 'shared/constants';
+import { grid } from 'shared/constants/constants.style';
 
 export const StyledContainer = styled.div`
   position: relative;

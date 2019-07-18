@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colorBlue } from 'shared/constants';
+import { colorBlue } from 'shared/constants/constants.style';
 
 export const StyledIcon = styled.div`
   height: 55px;
