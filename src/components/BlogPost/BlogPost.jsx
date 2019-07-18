@@ -34,7 +34,7 @@ const BlogPost = ({ data: { contentfulPost: post } }) => (
     <SEO
       title={`${post.title} - Blog`}
       description={post.description}
-      imageUrl={post.image.file.url}
+      imageUrl={post.image.file.url.replace('//', 'http://')}
     />
   </StyledContainer>
 );
