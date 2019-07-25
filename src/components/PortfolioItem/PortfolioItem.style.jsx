@@ -12,7 +12,7 @@ export const StyledDateContainer = styled.div`
   align-items: center;
   width: 100%;
   margin-top: ${grid * 2}px;
-  margin-bottom: ${grid};
+  margin-bottom: ${grid}px;
 
   @media (min-width: ${tabletBreakpoint}px) {
     margin-bottom: ${grid * 1.5}px;
