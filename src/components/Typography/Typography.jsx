@@ -10,19 +10,19 @@ import {
 export const HeadingLarge = styled.h1`
   font-size: 24px;
   font-weight: ${fontWeightBold};
-  margin: ${grid * 2}px 0;
+  margin: ${grid * 2}px 0 ${grid}px 0;
 `;
 
 export const Heading = styled.h2`
   font-size: 18px;
   font-weight: ${fontWeightBold};
-  margin: ${grid * 2}px 0;
+  margin: ${grid * 2}px 0 ${grid}px 0;
 `;
 
 export const HeadingSmall = styled.h3`
   font-size: 16px;
   font-weight: ${fontWeightBold};
-  margin: ${grid}px 0;
+  margin: ${grid}px 0 ${grid / 2}px 0;
 `;
 
 export const Paragraph = styled.p`
@@ -38,4 +38,8 @@ export const Highlight = styled.span`
 export const Image = styled(Img)`
   border-radius: 12px;
   margin: ${grid * 2}px auto;
+`;
+
+export const Code = styled.p`
+  margin: ${grid}px auto;
 `;

@@ -11,6 +11,7 @@ import {
   HeadingSmall,
   Paragraph,
   Image,
+  Code,
 } from 'components/Typography/Typography';
 
 const BlogPostHTML = ({ jsonPost }) => {
@@ -28,9 +29,11 @@ const BlogPostHTML = ({ jsonPost }) => {
     },
     renderMark: {
       [MARKS.CODE]: text => (
-        <SyntaxHighlighter language="javascript" style={vs}>
-          <>{text}</>
-        </SyntaxHighlighter>
+        <Code>
+          <SyntaxHighlighter language="javascript" style={vs}>
+            <>{text}</>
+          </SyntaxHighlighter>
+        </Code>
       ),
     },
     renderText: text => {
