@@ -71,7 +71,9 @@ export const StyledPageContent = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: ${grid * 3}px 0 ${grid}px 0;
+  flex-grow: 1;
+  /* grid * 4 shows content below menu icon */
+  margin-top: ${grid * 4}px;
 
   @media (min-width: ${tabletBreakpoint}px) {
     margin: 80px 22px 28px 545px;

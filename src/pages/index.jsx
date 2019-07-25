@@ -16,7 +16,6 @@ import Button from 'components/Button/Button';
 import SEO from 'components/SEO/SEO';
 
 const StyledContainer = styled.div`
-  margin-top: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
