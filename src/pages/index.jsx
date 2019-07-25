@@ -21,7 +21,7 @@ const StyledContainer = styled.div`
   align-items: center;
 
   @media (min-width: ${tabletBreakpoint}px) {
-    margin-top: 200px;
+    margin-top: ${grid * 4}px;
   }
 `;
 

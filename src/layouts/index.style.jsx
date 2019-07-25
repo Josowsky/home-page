@@ -76,7 +76,7 @@ export const StyledPageContent = styled.main`
   margin-top: ${grid * 4}px;
 
   @media (min-width: ${tabletBreakpoint}px) {
-    margin: 80px 22px 28px 545px;
+    margin: ${grid}px ${grid}px ${grid}px ${449 + grid * 6}px;
   }
 `;
 

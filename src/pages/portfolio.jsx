@@ -3,34 +3,13 @@ import { shape } from 'prop-types';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
-import { grid, mobileBreakpoint } from 'shared/constants/constants.style';
-
 import PortfolioItem from 'components/PortfolioItem/PortfolioItem';
 import SEO from 'components/SEO/SEO';
+import { HeadingLarge, Heading } from 'components/Typography/Typography';
 
 const StyledContainer = styled.div`
   width: 100%;
   height: 100%;
-`;
-
-const StyledHeader = styled.h1`
-  font-size: 24px;
-  margin-top: ${grid * 4}px;
-  margin-bottom: ${grid}px;
-
-  @media (min-width: ${mobileBreakpoint}px) {
-    font-size: 32px;
-  }
-`;
-
-const StyledSubheader = styled.h2`
-  font-size: 16px;
-  margin-bottom: ${grid * 2}px;
-
-  @media (min-width: ${mobileBreakpoint}px) {
-    font-size: 24px;
-    margin-bottom: ${grid * 4}px;
-  }
 `;
 
 const PortfolioPage = ({ data }) => {
@@ -83,10 +62,8 @@ const PortfolioPage = ({ data }) => {
   return (
     <Fragment>
       <StyledContainer>
-        <StyledHeader>Portfolio</StyledHeader>
-        <StyledSubheader>
-          Below you can find some projects that I worked on.
-        </StyledSubheader>
+        <HeadingLarge>Portfolio</HeadingLarge>
+        <Heading>Below you can find some projects that I worked on.</Heading>
         <div>
           {PROJECTS.map(project => (
             <PortfolioItem key={project.id} project={project} />
