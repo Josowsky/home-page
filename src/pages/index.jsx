@@ -65,7 +65,7 @@ const StyledButtons = styled.div`
 
 const StyledButton = styled(Button)`
   flex: 1 1 0%;
-  margin: ${grid}px;
+  margin: ${grid / 2}px;
 
   @media (min-width: ${tabletBreakpoint}px) {
     font-size: 18px;
