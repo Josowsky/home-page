@@ -76,6 +76,15 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.ANALYTICS_TRACKING_ID,
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+      },
+    },
   ],
   siteMetadata: {
     siteUrl: `https://www.bartek-jozwowiak.me`,
