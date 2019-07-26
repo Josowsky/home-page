@@ -79,7 +79,7 @@ export const StyledMenuContainer = styled.div`
 
 export const StyledFameSection = styled.div`
   position: absolute;
-  bottom: ${grid * 4}px;
+  bottom: ${grid * 1.5}px;
   left: 50%;
   transform: translateX(-50%);
 `;
