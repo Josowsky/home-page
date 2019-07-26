@@ -53,4 +53,9 @@ export const StyledBioContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: ${grid * 2}px;
+
+  @media (min-width: ${mobileBreakpoint}px) {
+    margin-top: ${grid * 3}px;
+  }
 `;

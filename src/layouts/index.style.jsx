@@ -71,18 +71,21 @@ export const StyledPageContent = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: ${grid * 3}px 0 ${grid}px 0;
+  flex-grow: 1;
+  /* grid * 4 shows content below menu icon */
+  margin-top: ${grid * 4}px;
 
   @media (min-width: ${tabletBreakpoint}px) {
-    margin: 80px 22px 28px 545px;
+    margin: ${grid}px ${grid}px ${grid}px ${449 + grid * 6}px;
   }
 `;
 
 export const StyledBlogContent = styled.main`
   max-width: 600px;
-  margin: ${grid}px auto;
+  width: 100%;
+  margin: ${grid}px auto ${grid * 2}px auto;
 
   @media (min-width: ${mobileBreakpoint}px) {
-    margin: ${grid * 3}px auto ${grid}px auto;
+    margin: ${grid * 3}px auto ${grid * 2}px auto;
   }
 `;

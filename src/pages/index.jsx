@@ -16,13 +16,12 @@ import Button from 'components/Button/Button';
 import SEO from 'components/SEO/SEO';
 
 const StyledContainer = styled.div`
-  margin-top: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @media (min-width: ${tabletBreakpoint}px) {
-    margin-top: 200px;
+    margin-top: ${grid * 4}px;
   }
 `;
 
@@ -66,7 +65,7 @@ const StyledButtons = styled.div`
 
 const StyledButton = styled(Button)`
   flex: 1 1 0%;
-  margin: ${grid}px;
+  margin: ${grid / 2}px;
 
   @media (min-width: ${tabletBreakpoint}px) {
     font-size: 18px;

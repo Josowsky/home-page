@@ -11,6 +11,7 @@ import {
   HeadingSmall,
   Paragraph,
   Image,
+  Code,
 } from 'components/Typography/Typography';
 
 const BlogPostHTML = ({ jsonPost }) => {
@@ -18,19 +19,23 @@ const BlogPostHTML = ({ jsonPost }) => {
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, children) => <Paragraph>{children}</Paragraph>,
       [BLOCKS.HEADING_1]: (node, children) => (
-        <HeadingLarge>{children}</HeadingLarge>
+        <HeadingLarge bold>{children}</HeadingLarge>
       ),
-      [BLOCKS.HEADING_2]: (node, children) => <Heading>{children}</Heading>,
+      [BLOCKS.HEADING_2]: (node, children) => (
+        <Heading bold>{children}</Heading>
+      ),
       [BLOCKS.HEADING_3]: (node, children) => (
-        <HeadingSmall>{children}</HeadingSmall>
+        <HeadingSmall bold>{children}</HeadingSmall>
       ),
       [BLOCKS.EMBEDDED_ASSET]: (node, children) => <Image>{children}</Image>,
     },
     renderMark: {
       [MARKS.CODE]: text => (
-        <SyntaxHighlighter language="javascript" style={vs}>
-          <>{text}</>
-        </SyntaxHighlighter>
+        <Code>
+          <SyntaxHighlighter language="javascript" style={vs}>
+            <>{text}</>
+          </SyntaxHighlighter>
+        </Code>
       ),
     },
     renderText: text => {
