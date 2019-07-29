@@ -9,21 +9,13 @@ import {
   StyledTechStackHeader,
 } from './SummaryBox.style';
 
-const SummaryBox = ({
-  projectDescription,
-  projectName,
-  projectTechStack = [],
-}) => (
+const SummaryBox = ({ projectDescription, projectName, projectTechStack }) => (
   <StyledContainer>
     <StyledHeader>{projectName}</StyledHeader>
     <StyledDescription>{projectDescription}</StyledDescription>
     <StyledTechStackContainer>
       <StyledTechStackHeader>I worked with:</StyledTechStackHeader>
-      <div>
-        {projectTechStack.map((tech, index) =>
-          index === projectTechStack.length - 1 ? ` ${tech}` : ` ${tech},`
-        )}
-      </div>
+      <div>{projectTechStack}</div>
     </StyledTechStackContainer>
   </StyledContainer>
 );

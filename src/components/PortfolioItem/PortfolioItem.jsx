@@ -1,5 +1,5 @@
 import React from 'react';
-import { arrayOf, shape, string } from 'prop-types';
+import { shape, string } from 'prop-types';
 
 import ImageBox from './components/ImageBox/ImageBox';
 import SummaryBox from './components/SummaryBox/SummaryBox';
@@ -36,7 +36,7 @@ PortfolioItem.propTypes = {
     description: string.isRequired,
     image: shape({}).isRequired,
     name: string.isRequired,
-    techStack: arrayOf(string).isRequired,
+    techStack: string.isRequired,
   }).isRequired,
 };
 
