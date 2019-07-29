@@ -5,7 +5,7 @@ import { StyledContainer, StyledImage } from './ImageBox.style';
 
 const ImageBox = ({ projectImage, projectName }) => (
   <StyledContainer>
-    <StyledImage alt={projectName} fluid={projectImage.childImageSharp.fluid} />
+    <StyledImage alt={projectName} fluid={projectImage.fluid} />
   </StyledContainer>
 );
 
