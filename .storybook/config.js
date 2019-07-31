@@ -1,5 +1,19 @@
-import { configure } from '@storybook/react';
+import React from 'react';
+import { addDecorator, configure } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+
+import GlobalStyles from 'styles/GlobalStyles';
+
+function withGlobalStyles(storyFn) {
+  return (
+    <>
+      <GlobalStyles />
+      {storyFn()}
+    </>
+  );
+}
+
+addDecorator(withGlobalStyles);
 
 // automatically import all files ending in *.stories.jsx
 const req = require.context('../src', true, /.stories.jsx$/);
