@@ -39,16 +39,23 @@ CONTENTFUL_SPACE_ID=someID
 CONTENTFUL_ACCESS_TOKEN=someToken
 ```
 
-To start the local server run:
+To start the local server:
 
 ```sh
 gatsby develop
 ```
 
-To create a production build run:
+To create a production build:
 
 ```sh
 gatsby build ; gatsby serve
+```
+
+### Storybook
+
+Running the storybook
+```sh
+yarn storybook
 ```
 
 ## References
@@ -65,7 +72,7 @@ Home page is live at: [https://www.bartek-jozwowiak.me](https://www.bartek-jozwo
 
 ## TODO
 
-- [ ] Add Storybook
+- [X] Add Storybook
 - [ ] Improve accessibility
 - [ ] Add CI with Buddy
 - [x] Improve meta tags
