@@ -7,11 +7,11 @@ import SummaryBox from './SummaryBox';
 storiesOf(`Portfolio/PortfolioItem/SummaryBox`, module).add(
   `SummaryBox default`,
   () => (
-    <div>
+    <div style={{ width: '600px', margin: '30px' }}>
       <SummaryBox
         projectDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et mauris viverra, malesuada nisi et, sagittis purus. Sed finibus sagittis interdum. Nulla sed maximus ipsum, in dictum enim. Sed fermentum ligula quis ex maximus ullamcorper sed ac purus."
         projectName="Example project"
-        projectTechStack={['React', 'Redux', 'Rxjs', 'Storybook']}
+        projectTechStack="React, Redux, Rxjs, Storybook"
       />
     </div>
   )
