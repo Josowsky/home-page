@@ -38,13 +38,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Bartek Jozwowiak - Frontend Web Developer`,
+        short_name: `Frontend Web Developer`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
+        background_color: `#777`,
+        theme_color: `#00acc9`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `src/images/avatar.png`,
       },
     },
     `gatsby-plugin-offline`,
