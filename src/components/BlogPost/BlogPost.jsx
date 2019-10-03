@@ -6,6 +6,7 @@ import { getBlogFormatDate } from 'shared/utils/getBlogFormatDate';
 
 import Bio from 'components/Bio/Bio';
 import SEO from 'components/SEO/SEO';
+import BlogTemplate from 'components/Templates/BlogTemplate';
 
 import {
   StyledContainer,
@@ -18,25 +19,27 @@ import {
 } from './BlogPost.style';
 
 const BlogPost = ({ data: { contentfulPost: post } }) => (
-  <StyledContainer>
-    <StyledHeader>
-      <StyledTitle>{post.title}</StyledTitle>
-      <StyledDescription>
-        {getBlogFormatDate(post.createdAt)}
-        {post.readingTime && ` • ${post.readingTime} min read`}
-      </StyledDescription>
-      <StyledPostImage sizes={post.image.sizes} />
-    </StyledHeader>
-    <StyledPostContent jsonPost={post.content.json} />
-    <StyledBioContainer>
-      <Bio variant="withLink" />
-    </StyledBioContainer>
-    <SEO
-      title={`${post.title} - Blog`}
-      description={post.description}
-      imageUrl={post.image.file.url.replace('//', 'http://')}
-    />
-  </StyledContainer>
+  <BlogTemplate>
+    <StyledContainer>
+      <StyledHeader>
+        <StyledTitle>{post.title}</StyledTitle>
+        <StyledDescription>
+          {getBlogFormatDate(post.createdAt)}
+          {post.readingTime && ` • ${post.readingTime} min read`}
+        </StyledDescription>
+        <StyledPostImage sizes={post.image.sizes} />
+      </StyledHeader>
+      <StyledPostContent jsonPost={post.content.json} />
+      <StyledBioContainer>
+        <Bio variant="withLink" />
+      </StyledBioContainer>
+      <SEO
+        title={`${post.title} - Blog`}
+        description={post.description}
+        imageUrl={post.image.file.url.replace('//', 'http://')}
+      />
+    </StyledContainer>
+  </BlogTemplate>
 );
 
 BlogPost.propTypes = {
