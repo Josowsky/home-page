@@ -34,11 +34,25 @@ exports.createPages = ({ graphql, actions }) => {
         component: blogPost,
         context: {
           id,
+          layoutType: 'blog',
         },
       });
     });
 
     return null;
+  });
+};
+
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage } = actions;
+
+  const layoutType = page.path.includes('/blog') ? 'blog' : 'home';
+
+  return createPage({
+    ...page,
+    context: {
+      layoutType,
+    },
   });
 };
 
