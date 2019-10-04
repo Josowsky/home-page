@@ -47,7 +47,6 @@ module.exports = {
         icon: `src/images/avatar.png`,
       },
     },
-    `gatsby-plugin-offline`,
     {
       resolve: 'gatsby-source-contentful',
       options: {
@@ -85,6 +84,7 @@ module.exports = {
         respectDNT: true,
       },
     },
+    `gatsby-plugin-offline`,
   ],
   siteMetadata: {
     siteUrl: `https://www.bartek-jozwowiak.me`,

@@ -1,6 +1,5 @@
 import React from 'react';
-import { func, oneOfType, node, bool } from 'prop-types';
-import { Location } from '@reach/router';
+import { func, oneOfType, node, shape, oneOf } from 'prop-types';
 
 import Menu from 'components/Menu/Menu';
 import MobileSideBar from 'components/MobileSideBar/MobileSideBar';
@@ -17,8 +16,8 @@ import {
   StyledBlogContent,
 } from './Layout.style';
 
-const Layout = ({ children, isBlog }) => {
-  if (isBlog)
+const Layout = ({ children, pageContext }) => {
+  if (pageContext.layoutType === 'blog')
     return (
       <StyledContainer>
         <GlobalStyles />
@@ -48,15 +47,9 @@ const Layout = ({ children, isBlog }) => {
 
 Layout.propTypes = {
   children: oneOfType([func, node]),
-  isBlog: bool.isRequired,
+  pageContext: shape({
+    layoutType: oneOf(['blog', 'home']).isRequired,
+  }).isRequired,
 };
 
-export default props => (
-  <Location>
-    {({ location }) => {
-      const isBlog = /^\/blog\/*/g.test(location.pathname);
-
-      return <Layout {...props} isBlog={isBlog} />;
-    }}
-  </Location>
-);
+export default Layout;
