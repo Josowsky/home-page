@@ -24,7 +24,6 @@ The blog is connected with the API on Contentful. <br/>
 - React
 - GraphQL
 - styled-components
-- Storybook
 
 ## Building the project
 
@@ -51,19 +50,11 @@ To create a production build:
 gatsby build ; gatsby serve
 ```
 
-### Storybook
-
-Running the storybook
-```sh
-yarn storybook
-```
-
 ## References
 
 - [Gatsby docs](https://www.gatsbyjs.org/docs/)
 - [styled-components docs](https://www.styled-components.com/docs)
 - [Contentful Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/)
-- [Storybook docs](https://www.messenger.com/t/1637561749676413)
 
 ## Production
 
@@ -72,7 +63,6 @@ Home page is live at: [https://www.bartek-jozwowiak.me](https://www.bartek-jozwo
 
 ## TODO
 
-- [X] Add Storybook
 - [ ] Improve accessibility
 - [ ] Add CI with Buddy
 - [x] Improve meta tags
