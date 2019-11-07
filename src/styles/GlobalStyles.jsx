@@ -9,14 +9,22 @@ import {
 
 export default createGlobalStyle`
   body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Ubuntu', sans-serif;
-  color: ${colorGrey};
-  font-weight: ${fontWeightNormal};
-}
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Ubuntu', Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: ${fontWeightNormal};
+    color: ${colorGrey};
+  }
 
-  div {
+  html {
+    box-sizing: border-box;
+  }
+
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 
