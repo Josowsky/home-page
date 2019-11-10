@@ -3,8 +3,9 @@ import { shape } from 'prop-types';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
+import { getCodeString } from 'shared/utils/getCodeString';
 import {
   HeadingLarge,
   Heading,
@@ -32,8 +33,13 @@ const BlogPostHTML = ({ jsonPost }) => {
     renderMark: {
       [MARKS.CODE]: text => (
         <Code>
-          <SyntaxHighlighter language="javascript" style={vs}>
-            <>{text}</>
+          <SyntaxHighlighter
+            wrapLines
+            showLineNumbers
+            language="css" // TODO: get language from the api
+            style={darcula}
+          >
+            {getCodeString(text)}
           </SyntaxHighlighter>
         </Code>
       ),
