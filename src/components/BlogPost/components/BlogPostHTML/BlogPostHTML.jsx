@@ -2,17 +2,16 @@ import React from 'react';
 import { shape } from 'prop-types';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
+import { getCodeString } from 'shared/utils/getCodeString';
 import {
   HeadingLarge,
   Heading,
   HeadingSmall,
   Paragraph,
   Image,
-  Code,
 } from 'components/Typography/Typography';
+import { Code } from 'components/Code/Code';
 
 const BlogPostHTML = ({ jsonPost }) => {
   const options = {
@@ -30,13 +29,11 @@ const BlogPostHTML = ({ jsonPost }) => {
       [BLOCKS.EMBEDDED_ASSET]: (node, children) => <Image>{children}</Image>,
     },
     renderMark: {
-      [MARKS.CODE]: text => (
-        <Code>
-          <SyntaxHighlighter language="javascript" style={vs}>
-            <>{text}</>
-          </SyntaxHighlighter>
-        </Code>
-      ),
+      [MARKS.CODE]: text => {
+        const { codeString, lang } = getCodeString(text);
+
+        return <Code code={codeString} language={lang} />;
+      },
     },
     renderText: text => {
       return text.split('\n').reduce((children, textSegment, index) => {

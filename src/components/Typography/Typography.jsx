@@ -41,7 +41,3 @@ export const Image = styled(Img)`
   border-radius: 12px;
   margin: ${grid * 2}px auto;
 `;
-
-export const Code = styled.p`
-  margin: ${grid}px auto;
-`;
