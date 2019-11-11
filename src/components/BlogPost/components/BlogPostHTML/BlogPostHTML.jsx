@@ -2,8 +2,6 @@ import React from 'react';
 import { shape } from 'prop-types';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 import { getCodeString } from 'shared/utils/getCodeString';
 import {
@@ -12,8 +10,8 @@ import {
   HeadingSmall,
   Paragraph,
   Image,
-  Code,
 } from 'components/Typography/Typography';
+import { Code } from 'components/Code/Code';
 
 const BlogPostHTML = ({ jsonPost }) => {
   const options = {
@@ -34,18 +32,7 @@ const BlogPostHTML = ({ jsonPost }) => {
       [MARKS.CODE]: text => {
         const { codeString, lang } = getCodeString(text);
 
-        return (
-          <Code>
-            <SyntaxHighlighter
-              wrapLines
-              showLineNumbers
-              language={lang}
-              style={darcula}
-            >
-              {codeString}
-            </SyntaxHighlighter>
-          </Code>
-        );
+        return <Code code={codeString} language={lang} />;
       },
     },
     renderText: text => {
