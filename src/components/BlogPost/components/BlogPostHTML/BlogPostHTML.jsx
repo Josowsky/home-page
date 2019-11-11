@@ -31,18 +31,22 @@ const BlogPostHTML = ({ jsonPost }) => {
       [BLOCKS.EMBEDDED_ASSET]: (node, children) => <Image>{children}</Image>,
     },
     renderMark: {
-      [MARKS.CODE]: text => (
-        <Code>
-          <SyntaxHighlighter
-            wrapLines
-            showLineNumbers
-            language="css" // TODO: get language from the api
-            style={darcula}
-          >
-            {getCodeString(text)}
-          </SyntaxHighlighter>
-        </Code>
-      ),
+      [MARKS.CODE]: text => {
+        const { codeString, lang } = getCodeString(text);
+
+        return (
+          <Code>
+            <SyntaxHighlighter
+              wrapLines
+              showLineNumbers
+              language={lang}
+              style={darcula}
+            >
+              {codeString}
+            </SyntaxHighlighter>
+          </Code>
+        );
+      },
     },
     renderText: text => {
       return text.split('\n').reduce((children, textSegment, index) => {
