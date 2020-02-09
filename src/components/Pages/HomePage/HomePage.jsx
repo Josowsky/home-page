@@ -24,7 +24,7 @@ const HomePage = ({ data }) => (
     </StyledHeader>
     <StyledButtons>
       <StyledButton label="About" to={routes.about} />
-      <StyledButton label="Portfolio" to={routes.portfolio} />
+      <StyledButton label="Blog" to={routes.blog} />
     </StyledButtons>
     <SEO
       title="Bartek Józwowiak"

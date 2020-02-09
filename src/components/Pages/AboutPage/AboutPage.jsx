@@ -59,7 +59,7 @@ const AboutPage = ({ data }) => (
       for a workation contact me as well.
     </Paragraph>
     <StyledButtons>
-      <StyledButton label="Portfolio" to={routes.portfolio} />
+      <StyledButton label="Blog" to={routes.blog} />
     </StyledButtons>
     <SEO
       title="About"
