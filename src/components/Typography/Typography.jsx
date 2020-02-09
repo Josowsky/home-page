@@ -28,7 +28,7 @@ export const HeadingSmall = styled.h3`
 
 export const Paragraph = styled.p`
   margin-bottom: ${grid}px;
-  font-size: ${props => (props.large ? 20 : 16)}px;
+  font-size: 16px;
 `;
 
 export const Highlight = styled.span`
