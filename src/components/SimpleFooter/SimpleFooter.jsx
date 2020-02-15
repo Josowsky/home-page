@@ -11,8 +11,8 @@ const SimpleFooter = () => (
     >
       LinkedIn
     </StyledLink>
-    <StyledLink title="Send me an email" href="mailto:bartosz@jozwowiak.pl">
-      Email
+    <StyledLink title="My GitHub account" href="https://github.com/Josowsky">
+      GitHub
     </StyledLink>
   </StyledContainer>
 );
