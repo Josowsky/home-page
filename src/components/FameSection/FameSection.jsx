@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { FaLinkedinIn, FaRegEnvelope } from 'react-icons/fa';
+import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
 import { StyledContainer, StyledLink, StyledDot } from './FameSection.style';
 
@@ -11,8 +11,8 @@ const icons = [
   },
   {
     id: 2,
-    image: <FaRegEnvelope />,
-    link: 'mailto:bartosz@jozwowiak.pl',
+    image: <FaGithub />,
+    link: 'https://github.com/Josowsky',
   },
 ];
 

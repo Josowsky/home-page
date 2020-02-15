@@ -12,7 +12,6 @@ const CreditsSection = () => (
     <StyledTitle>
       Made with <StyledFaCoffee /> and <StyledFaHeart />
     </StyledTitle>
-    <div>Powered by Gatsby</div>
   </StyledContainer>
 );
 
