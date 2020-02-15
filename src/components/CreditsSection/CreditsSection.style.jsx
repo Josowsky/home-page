@@ -12,6 +12,7 @@ export const StyledContainer = styled.div`
 
 export const StyledTitle = styled.div`
   margin-right: auto;
+  margin-left: auto;
   display: flex;
   align-items: center;
 `;
