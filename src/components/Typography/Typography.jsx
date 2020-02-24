@@ -29,12 +29,14 @@ export const HeadingSmall = styled.h3`
 export const Paragraph = styled.p`
   margin-bottom: ${grid}px;
   font-size: 16px;
+  line-height: 1.5em;
 `;
 
 export const Highlight = styled.span`
-  color: #fff;
-  background-color: ${colorBlue};
-  padding: 0.2em;
+  color: ${colorBlue};
+  background-color: ${`${colorBlue}20`};
+  padding: 0.04em 0.25em;
+  border-radius: 4px;
 `;
 
 export const Image = styled(Img)`
