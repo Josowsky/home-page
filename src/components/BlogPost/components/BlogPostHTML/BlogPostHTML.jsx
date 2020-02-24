@@ -10,6 +10,7 @@ import {
   HeadingSmall,
   Paragraph,
   Image,
+  Highlight,
 } from 'components/Typography/Typography';
 import { Code } from 'components/Code/Code';
 
@@ -34,6 +35,7 @@ const BlogPostHTML = ({ jsonPost }) => {
 
         return <Code code={codeString} language={lang} />;
       },
+      [MARKS.ITALIC]: text => <Highlight>{text}</Highlight>,
     },
     renderText: text => {
       return text.split('\n').reduce((children, textSegment, index) => {
