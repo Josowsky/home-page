@@ -46,7 +46,8 @@ const Bio = ({ variant = 'default' }) => (
             <Link to="/" title="Home page">
               Bartek Józwowiak
             </Link>
-            . I write mostly about new frontend tools and React related stuff.
+            . I write mostly about new frontend tools and web development
+            related stuff.
           </StyledDescription>
         </StyledInfoContainer>
         <StyledAvatar alt="My photo" fixed={fixed} />
