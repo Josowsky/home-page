@@ -9,7 +9,7 @@ import {
   Heading,
   HeadingSmall,
   Paragraph,
-  Image,
+  Highlight,
 } from 'components/Typography/Typography';
 import { Code } from 'components/Code/Code';
 
@@ -26,7 +26,6 @@ const BlogPostHTML = ({ jsonPost }) => {
       [BLOCKS.HEADING_3]: (node, children) => (
         <HeadingSmall bold>{children}</HeadingSmall>
       ),
-      [BLOCKS.EMBEDDED_ASSET]: (node, children) => <Image>{children}</Image>,
     },
     renderMark: {
       [MARKS.CODE]: text => {
@@ -34,6 +33,7 @@ const BlogPostHTML = ({ jsonPost }) => {
 
         return <Code code={codeString} language={lang} />;
       },
+      [MARKS.ITALIC]: text => <Highlight>{text}</Highlight>,
     },
     renderText: text => {
       return text.split('\n').reduce((children, textSegment, index) => {
