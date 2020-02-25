@@ -9,7 +9,6 @@ import {
   Heading,
   HeadingSmall,
   Paragraph,
-  Image,
   Highlight,
 } from 'components/Typography/Typography';
 import { Code } from 'components/Code/Code';
@@ -27,7 +26,6 @@ const BlogPostHTML = ({ jsonPost }) => {
       [BLOCKS.HEADING_3]: (node, children) => (
         <HeadingSmall bold>{children}</HeadingSmall>
       ),
-      [BLOCKS.EMBEDDED_ASSET]: (node, children) => <Image>{children}</Image>,
     },
     renderMark: {
       [MARKS.CODE]: text => {
