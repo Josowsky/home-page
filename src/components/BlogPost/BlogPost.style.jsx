@@ -59,3 +59,7 @@ export const StyledBioContainer = styled.div`
     margin-top: ${grid * 3}px;
   }
 `;
+
+export const StyledTagsContainer = styled.div`
+  margin-top: ${grid * 3}px;
+`;

@@ -1,11 +1,12 @@
 import React from 'react';
-import { shape, string, number } from 'prop-types';
+import { arrayOf, shape, string, number } from 'prop-types';
 import { graphql } from 'gatsby';
 
 import { getBlogFormatDate } from 'shared/utils/getBlogFormatDate';
 
 import Bio from 'components/Bio/Bio';
 import SEO from 'components/SEO/SEO';
+import Tags from 'components/Tags/Tags';
 
 import {
   StyledContainer,
@@ -15,6 +16,7 @@ import {
   StyledPostImage,
   StyledPostContent,
   StyledBioContainer,
+  StyledTagsContainer,
 } from './BlogPost.style';
 
 const BlogPost = ({ data: { contentfulPost: post } }) => (
@@ -28,6 +30,11 @@ const BlogPost = ({ data: { contentfulPost: post } }) => (
       <StyledPostImage sizes={post.image.sizes} />
     </StyledHeader>
     <StyledPostContent jsonPost={post.content.json} />
+    {post.tags && (
+      <StyledTagsContainer>
+        <Tags tags={post.tags} />
+      </StyledTagsContainer>
+    )}
     <StyledBioContainer>
       <Bio variant="withLink" />
     </StyledBioContainer>
@@ -53,6 +60,7 @@ BlogPost.propTypes = {
       content: shape({
         json: shape({}).isRequired,
       }).isRequired,
+      tags: arrayOf(string),
     }).isRequired,
   }).isRequired,
 };
@@ -77,6 +85,7 @@ export const pageQuery = graphql`
       content {
         json
       }
+      tags
     }
   }
 `;
