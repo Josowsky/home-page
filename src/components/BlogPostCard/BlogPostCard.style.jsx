@@ -10,12 +10,10 @@ import {
 
 export const StyledContainer = styled.article`
   padding: ${grid}px;
-  border: 1px rgba(119, 119, 119, 0.2) solid;
-  box-shadow: 0 4px 4px rgba(119, 119, 119, 0.15);
-  border-radius: 12px;
+  border-bottom: 1px rgba(119, 119, 119, 0.2) solid;
 
   &:not(:last-child) {
-    margin-bottom: ${grid * 2.5}px;
+    margin-bottom: ${grid * 2}px;
   }
 `;
 

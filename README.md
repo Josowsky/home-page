@@ -63,6 +63,7 @@ Home page is live at: [https://www.bartek-jozwowiak.me](https://www.bartek-jozwo
 
 ## TODO
 
-- [ ] Improve accessibility
-- [ ] Add CI with Buddy
 - [x] Improve meta tags
+- [ ] Move blog to subdomain
+- [ ] Add Storybook
+- [ ] Add CV page

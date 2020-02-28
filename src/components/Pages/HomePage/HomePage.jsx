@@ -28,7 +28,7 @@ const HomePage = ({ data }) => (
     </StyledButtons>
     <SEO
       title="Bartek Józwowiak"
-      description="I am a Web Developer with Frontend experience. Check out my portfolio to see projects that I worked on."
+      description="I am a Web Developer with Frontend experience. Check out the about page to read more about my experience."
     />
   </StyledContainer>
 );

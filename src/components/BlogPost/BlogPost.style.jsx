@@ -53,7 +53,7 @@ export const StyledBioContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: ${grid * 2}px;
+  margin-top: ${grid * 3}px;
 
   @media (min-width: ${mobileBreakpoint}px) {
     margin-top: ${grid * 3}px;
@@ -62,4 +62,5 @@ export const StyledBioContainer = styled.div`
 
 export const StyledTagsContainer = styled.div`
   margin-top: ${grid * 3}px;
+  margin-bottom: -${grid}px;
 `;
