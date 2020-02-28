@@ -38,7 +38,7 @@ const Bio = ({ variant = 'default' }) => (
           {variant === 'default' && <StyledHeader>Blog</StyledHeader>}
           {variant === 'withLink' && (
             <BioLink title="Blog" path={routes.blog}>
-              Blog
+              All posts
             </BioLink>
           )}
           <StyledDescription>
