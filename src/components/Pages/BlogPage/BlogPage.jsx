@@ -34,7 +34,7 @@ const BlogPage = ({
     </div>
     <SEO
       title="Blog"
-      description="On my blog I write mostly about frontend related stuff like React, Cypress, CSS-in-JS, TypeScript etc."
+      description="On my blog, I write mostly about new frontend libraries and tools and everything related to web development."
     />
   </StyledContainer>
 );
