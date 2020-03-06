@@ -15,7 +15,6 @@ export const StyledContainer = styled.div`
   @media (min-width: ${tabletBreakpoint}px) {
     width: calc(100% - 24px);
     min-height: calc(100vh - 24px);
-    padding: ${grid * 2}px;
     margin: 12px;
     border-radius: 12px;
   }

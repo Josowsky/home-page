@@ -7,7 +7,7 @@ import { getUrlPath } from 'shared/utils/getUrlPath';
 import Bio from 'components/Bio/Bio';
 import BlogPostCard from 'components/BlogPostCard/BlogPostCard';
 import SEO from 'components/SEO/SEO';
-import { StyledBlogContent } from 'components/PageWrappers/PageWrappers';
+import { BlogContent } from 'components/PageWrappers/PageWrappers';
 import { StyledContainer, StyledBioContainer } from './BlogPage.style';
 
 const BlogPage = ({
@@ -15,7 +15,7 @@ const BlogPage = ({
     allContentfulPost: { edges: posts },
   },
 }) => (
-  <StyledBlogContent>
+  <BlogContent>
     <StyledContainer>
       <StyledBioContainer>
         <Bio />
@@ -39,7 +39,7 @@ const BlogPage = ({
         description="On my blog, I write mostly about new frontend libraries and tools and everything related to web development."
       />
     </StyledContainer>
-  </StyledBlogContent>
+  </BlogContent>
 );
 
 BlogPage.propTypes = {

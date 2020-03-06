@@ -5,7 +5,7 @@ import { graphql } from 'gatsby';
 import { getBlogFormatDate } from 'shared/utils/getBlogFormatDate';
 
 import Bio from 'components/Bio/Bio';
-import { StyledBlogContent } from 'components/PageWrappers/PageWrappers';
+import { BlogContent } from 'components/PageWrappers/PageWrappers';
 import SEO from 'components/SEO/SEO';
 import Tags from 'components/Tags/Tags';
 
@@ -21,7 +21,7 @@ import {
 } from './BlogPost.style';
 
 const BlogPost = ({ data: { contentfulPost: post } }) => (
-  <StyledBlogContent>
+  <BlogContent>
     <StyledContainer>
       <StyledHeader>
         <StyledTitle>{post.title}</StyledTitle>
@@ -46,7 +46,7 @@ const BlogPost = ({ data: { contentfulPost: post } }) => (
         imageUrl={post.image.file.url.replace('//', 'http://')}
       />
     </StyledContainer>
-  </StyledBlogContent>
+  </BlogContent>
 );
 
 BlogPost.propTypes = {

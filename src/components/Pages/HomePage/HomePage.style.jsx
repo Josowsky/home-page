@@ -12,11 +12,12 @@ import Button from 'components/Button/Button';
 
 export const StyledContainer = styled.div`
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   align-items: center;
 
   @media (min-width: ${tabletBreakpoint}px) {
-    margin-top: ${grid * 4}px;
+    margin-top: ${grid * 16}px;
   }
 `;
 

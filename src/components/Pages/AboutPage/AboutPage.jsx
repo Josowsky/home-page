@@ -6,7 +6,7 @@ import { routes } from 'shared/constants/constants';
 
 import SEO from 'components/SEO/SEO';
 import Sidebar from 'components/Sidebar/Sidebar';
-import { StyledPageContent } from 'components/PageWrappers/PageWrappers';
+import { PageContent } from 'components/PageWrappers/PageWrappers';
 import {
   HeadingLarge,
   Paragraph,
@@ -20,7 +20,7 @@ import {
 } from './AboutPage.style';
 
 const AboutPage = ({ data }) => (
-  <StyledPageContent>
+  <PageContent>
     <StyledContainer>
       <StyledSidebar>
         <Sidebar />
@@ -73,7 +73,7 @@ const AboutPage = ({ data }) => (
         description="I am a Web Developer experienced with React, TypeScript and Angular"
       />
     </StyledContainer>
-  </StyledPageContent>
+  </PageContent>
 );
 
 AboutPage.propTypes = {

@@ -5,7 +5,7 @@ import { routes } from 'shared/constants/constants';
 
 import SEO from 'components/SEO/SEO';
 import Sidebar from 'components/Sidebar/Sidebar';
-import { StyledPageContent } from 'components/PageWrappers/PageWrappers';
+import { PageContent } from 'components/PageWrappers/PageWrappers';
 import {
   StyledContainer,
   StyledAvatarContainer,
@@ -17,7 +17,7 @@ import {
 } from './HomePage.style';
 
 const HomePage = ({ data }) => (
-  <StyledPageContent>
+  <PageContent>
     <StyledContainer>
       <StyledSidebar>
         <Sidebar />
@@ -38,7 +38,7 @@ const HomePage = ({ data }) => (
         description="I am a Web Developer with Frontend experience. Check out the about page to read more about my experience."
       />
     </StyledContainer>
-  </StyledPageContent>
+  </PageContent>
 );
 
 HomePage.propTypes = {

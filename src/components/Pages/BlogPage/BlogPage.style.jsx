@@ -6,6 +6,7 @@ export const StyledContainer = styled.div`
   width: 100%;
   height: 100%;
   max-width: 730px;
+  margin-bottom: ${grid * 2}px;
 `;
 
 export const StyledBioContainer = styled.div`

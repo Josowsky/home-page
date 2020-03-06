@@ -1,30 +1,27 @@
-import styled from 'styled-components';
+import React from 'react';
+import { func, oneOfType, node } from 'prop-types';
 
-import {
-  grid,
-  tabletBreakpoint,
-  mobileBreakpoint,
-} from 'shared/constants/constants.style';
+import SimpleFooter from 'components/SimpleFooter/SimpleFooter';
+import { StyledPageContent, StyledBlogContent } from './PageWrappers.style';
 
-export const StyledPageContent = styled.main`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-grow: 1;
-  /* grid * 4 shows content below menu icon */
-  margin-top: ${grid * 4}px;
+export const PageContent = ({ children }) => (
+  <StyledPageContent>
+    {children}
+    <SimpleFooter />
+  </StyledPageContent>
+);
 
-  @media (min-width: ${tabletBreakpoint}px) {
-    margin: ${grid}px ${grid}px ${grid}px ${449 + grid * 6}px;
-  }
-`;
+PageContent.propTypes = {
+  children: oneOfType([func, node]),
+};
 
-export const StyledBlogContent = styled.main`
-  max-width: 600px;
-  width: 100%;
-  margin: ${grid}px auto ${grid * 2}px auto;
+export const BlogContent = ({ children }) => (
+  <StyledBlogContent>
+    {children}
+    <SimpleFooter />
+  </StyledBlogContent>
+);
 
-  @media (min-width: ${mobileBreakpoint}px) {
-    margin: ${grid * 3}px auto ${grid * 2}px auto;
-  }
-`;
+BlogContent.propTypes = {
+  children: oneOfType([func, node]),
+};
