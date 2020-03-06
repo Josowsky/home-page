@@ -24,7 +24,7 @@ export const StyledBackgroundContainer = styled.div`
   width: 100%;
 `;
 
-export const StyledBackgroundImage = styled(BackgroundImage)`
+export const StyledBackgroundImage = styled.img`
   height: 100%;
 `;
 
