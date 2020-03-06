@@ -66,3 +66,33 @@ export const StyledButton = styled(Button)`
     font-size: 18px;
   }
 `;
+
+export const StyledSidebar = styled.aside`
+  display: none;
+
+  @media (min-width: ${tabletBreakpoint}px) {
+    display: block;
+    width: 465px;
+    height: calc(100% - 56px);
+    background-color: ${colorBlue};
+    border-radius: 12px;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 28px;
+    left: 28px;
+  }
+
+  @media (min-width: ${tabletBreakpoint}px) {
+    display: block;
+    width: 465px;
+    height: calc(100% - 56px);
+    background-color: ${colorBlue};
+    border-radius: 12px;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 28px;
+    left: 28px;
+  }
+`;
