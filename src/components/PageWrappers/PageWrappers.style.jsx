@@ -28,3 +28,14 @@ export const StyledBlogContent = styled.main`
     margin: ${grid * 3}px auto ${grid * 2}px auto;
   }
 `;
+
+export const StyledMenu = styled.div`
+  display: none;
+
+  @media (min-width: ${tabletBreakpoint}px) {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 42px;
+  }
+`;
