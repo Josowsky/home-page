@@ -7,6 +7,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = {
   plugins: [
+    'gatsby-plugin-netlify',
     `gatsby-plugin-layout`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -16,8 +17,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Bartek Jozwowiak - Frontend Web Developer`,
-        short_name: `Frontend Web Developer`,
+        name: `Bartek Jozwowiak - Frontend Engineer`,
+        short_name: `Frontend Engineer`,
         start_url: `/`,
         background_color: `#777`,
         theme_color: `#00acc9`,
