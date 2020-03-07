@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import BackgroundImage from 'gatsby-background-image';
 
 import { grid } from 'shared/constants/constants.style';
 
@@ -22,10 +21,10 @@ export const StyledBackgroundContainer = styled.div`
   pointer-events: none;
   height: 100%;
   width: 100%;
-`;
-
-export const StyledBackgroundImage = styled.img`
-  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-image: url('sidebar.png');
 `;
 
 export const StyledFameSection = styled.div`

@@ -7,7 +7,6 @@ import FameSection from 'components/FameSection/FameSection';
 import {
   StyledContainer,
   StyledBackgroundContainer,
-  StyledBackgroundImage,
   StyledFameSection,
   StyledAvatarGroup,
   StyledFooter,
@@ -15,9 +14,7 @@ import {
 
 const Sidebar = () => (
   <StyledContainer>
-    <StyledBackgroundContainer>
-      <StyledBackgroundImage src="sidebar.png" alt="Sidebar background image" />
-    </StyledBackgroundContainer>
+    <StyledBackgroundContainer />
     <StyledFameSection>
       <FameSection />
     </StyledFameSection>
