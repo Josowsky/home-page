@@ -10,6 +10,7 @@ import {
   StyledContainer,
   StyledAvatarContainer,
   StyledImage,
+  StyledPageContent,
   StyledHeader,
   StyledButtons,
   StyledButton,
@@ -25,14 +26,16 @@ const HomePage = ({ data }) => (
       <StyledAvatarContainer>
         <StyledImage alt="My photo" fixed={data.file.childImageSharp.fixed} />
       </StyledAvatarContainer>
-      <StyledHeader>
-        Hello, my name is Bartek, I create modern web apps in JavaScript and I
-        love what I do.
-      </StyledHeader>
-      <StyledButtons>
-        <StyledButton label="About" to={routes.about} />
-        <StyledButton label="Blog" to={routes.blog} />
-      </StyledButtons>
+      <StyledPageContent>
+        <StyledHeader>
+          Hello, my name is Bartek, I create modern web apps in JavaScript and I
+          love what I do.
+        </StyledHeader>
+        <StyledButtons>
+          <StyledButton label="About" to={routes.about} />
+          <StyledButton label="Blog" to={routes.blog} />
+        </StyledButtons>
+      </StyledPageContent>
       <SEO
         title="Bartek Józwowiak"
         description="I am a Web Engineer with Frontend experience. Check out the about page to read more about my experience."

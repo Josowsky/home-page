@@ -16,11 +16,6 @@ export const StyledContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: ${grid}px;
-
-  @media (min-width: ${tabletBreakpoint}px) {
-    margin-top: 25%;
-    margin-bottom: 0;
-  }
 `;
 
 export const StyledAvatarContainer = styled.div`
@@ -36,6 +31,18 @@ export const StyledImage = styled(Img)`
   height: 110px;
   width: 110px;
   border: 1px solid ${colorBlue};
+`;
+
+export const StyledPageContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: ${tabletBreakpoint}px) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 `;
 
 export const StyledHeader = styled.h1`
