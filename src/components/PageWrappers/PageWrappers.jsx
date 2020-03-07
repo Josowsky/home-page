@@ -16,7 +16,6 @@ export const PageContent = ({ children }) => (
       <Menu />
     </StyledMenu>
     {children}
-    <SimpleFooter />
     <MobileSideBar />
   </StyledPageContent>
 );
