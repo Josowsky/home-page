@@ -15,9 +15,11 @@ export const StyledContainer = styled.div`
   flex-grow: 1;
   flex-direction: column;
   align-items: center;
+  margin-bottom: ${grid}px;
 
   @media (min-width: ${tabletBreakpoint}px) {
-    margin-top: ${grid * 16}px;
+    margin-top: ${grid * 4}px;
+    margin-bottom: 0;
   }
 `;
 
@@ -37,13 +39,15 @@ export const StyledImage = styled(Img)`
 `;
 
 export const StyledHeader = styled.h1`
-  font-size: 24px;
+  font-size: 21px;
   color: ${colorGrey};
-  text-align: justify;
+  text-align: center;
+  padding: 0 ${grid}px;
 
   @media (min-width: ${tabletBreakpoint}px) {
     font-size: 32px;
     text-align: center;
+    padding: 0;
   }
 `;
 
