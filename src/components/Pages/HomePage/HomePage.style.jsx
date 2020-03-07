@@ -12,14 +12,10 @@ import Button from 'components/Button/Button';
 
 export const StyledContainer = styled.div`
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   align-items: center;
   margin-bottom: ${grid}px;
-
-  @media (min-width: ${tabletBreakpoint}px) {
-    margin-top: ${grid * 4}px;
-    margin-bottom: 0;
-  }
 `;
 
 export const StyledAvatarContainer = styled.div`
@@ -35,6 +31,18 @@ export const StyledImage = styled(Img)`
   height: 110px;
   width: 110px;
   border: 1px solid ${colorBlue};
+`;
+
+export const StyledPageContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: ${tabletBreakpoint}px) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 `;
 
 export const StyledHeader = styled.h1`
@@ -68,5 +76,35 @@ export const StyledButton = styled(Button)`
 
   @media (min-width: ${tabletBreakpoint}px) {
     font-size: 18px;
+  }
+`;
+
+export const StyledSidebar = styled.aside`
+  display: none;
+
+  @media (min-width: ${tabletBreakpoint}px) {
+    display: block;
+    width: 465px;
+    height: calc(100% - 56px);
+    background-color: ${colorBlue};
+    border-radius: 12px;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 28px;
+    left: 28px;
+  }
+
+  @media (min-width: ${tabletBreakpoint}px) {
+    display: block;
+    width: 465px;
+    height: calc(100% - 56px);
+    background-color: ${colorBlue};
+    border-radius: 12px;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 28px;
+    left: 28px;
   }
 `;

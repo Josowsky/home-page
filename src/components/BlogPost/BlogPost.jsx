@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import { getBlogFormatDate } from 'shared/utils/getBlogFormatDate';
 
 import Bio from 'components/Bio/Bio';
+import { BlogContent } from 'components/PageWrappers/PageWrappers';
 import SEO from 'components/SEO/SEO';
 import Tags from 'components/Tags/Tags';
 
@@ -20,30 +21,32 @@ import {
 } from './BlogPost.style';
 
 const BlogPost = ({ data: { contentfulPost: post } }) => (
-  <StyledContainer>
-    <StyledHeader>
-      <StyledTitle>{post.title}</StyledTitle>
-      <StyledDescription>
-        {getBlogFormatDate(post.createdAt)}
-        {post.readingTime && ` • ${post.readingTime} min read`}
-      </StyledDescription>
-      <StyledPostImage sizes={post.image.sizes} />
-    </StyledHeader>
-    <StyledPostContent jsonPost={post.content.json} />
-    {post.tags && (
-      <StyledTagsContainer>
-        <Tags tags={post.tags} />
-      </StyledTagsContainer>
-    )}
-    <StyledBioContainer>
-      <Bio variant="withLink" />
-    </StyledBioContainer>
-    <SEO
-      title={`${post.title} - Blog`}
-      description={post.description}
-      imageUrl={post.image.file.url.replace('//', 'http://')}
-    />
-  </StyledContainer>
+  <BlogContent>
+    <StyledContainer>
+      <StyledHeader>
+        <StyledTitle>{post.title}</StyledTitle>
+        <StyledDescription>
+          {getBlogFormatDate(post.createdAt)}
+          {post.readingTime && ` • ${post.readingTime} min read`}
+        </StyledDescription>
+        <StyledPostImage sizes={post.image.sizes} />
+      </StyledHeader>
+      <StyledPostContent jsonPost={post.content.json} />
+      {post.tags && (
+        <StyledTagsContainer>
+          <Tags tags={post.tags} />
+        </StyledTagsContainer>
+      )}
+      <StyledBioContainer>
+        <Bio variant="withLink" />
+      </StyledBioContainer>
+      <SEO
+        title={`${post.title} - Blog`}
+        description={post.description}
+        imageUrl={post.image.file.url.replace('//', 'http://')}
+      />
+    </StyledContainer>
+  </BlogContent>
 );
 
 BlogPost.propTypes = {

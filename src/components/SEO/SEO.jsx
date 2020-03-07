@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { Location } from '@reach/router';
 import { StaticQuery, graphql } from 'gatsby';
 
-const TITLE_TEMPLATE = '%s - Frontend Web Developer';
+const TITLE_TEMPLATE = '%s - Frontend Engineer';
 
 const SEO = ({
   title = '',
