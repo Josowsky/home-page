@@ -29,7 +29,7 @@ const AboutPage = ({ data }) => (
       <Image alt="About banner photo" fluid={data.file.childImageSharp.fluid} />
       <Paragraph>
         Hi, I&apos;m Bartek. I am a Web Developer and web technologies
-        passionate. Currently, I work remotely as a Frontend Developer at{' '}
+        passionate. Currently, I work remotely as a Frontend Engineer at{' '}
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -70,7 +70,7 @@ const AboutPage = ({ data }) => (
       </StyledButtons>
       <SEO
         title="About"
-        description="I am a Web Developer experienced with React, TypeScript and Angular"
+        description="I am a Web Engineer experienced with React, TypeScript and Angular"
       />
     </StyledContainer>
   </PageContent>

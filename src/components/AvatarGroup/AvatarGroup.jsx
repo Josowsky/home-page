@@ -30,7 +30,7 @@ const AvatarGroup = () => (
           <StyledImage alt="My photo" fixed={data.file.childImageSharp.fixed} />
         </StyledAvatar>
         <StyledName>Bartek Józwowiak</StyledName>
-        <StyledTitle>Frontend Developer</StyledTitle>
+        <StyledTitle>Frontend Engineer</StyledTitle>
       </StyledContainer>
     )}
   />

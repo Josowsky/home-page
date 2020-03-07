@@ -75,7 +75,7 @@ class MobileSideBar extends PureComponent {
               <StyledContentContainer>
                 <div>
                   <StyledName>Bartek Józwowiak</StyledName>
-                  <StyledTitle>Frontend Developer</StyledTitle>
+                  <StyledTitle>Frontend Engineer</StyledTitle>
                 </div>
                 <StyledMenuContainer>
                   <MenuMobile onClick={this.setMenuOpened(false)} />

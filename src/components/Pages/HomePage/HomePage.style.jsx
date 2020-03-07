@@ -18,7 +18,7 @@ export const StyledContainer = styled.div`
   margin-bottom: ${grid}px;
 
   @media (min-width: ${tabletBreakpoint}px) {
-    margin-top: ${grid * 4}px;
+    margin-top: 25%;
     margin-bottom: 0;
   }
 `;
