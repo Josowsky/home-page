@@ -15,6 +15,13 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-styled-components',
     {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#777`,
+        showSpinner: false,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Bartek Jozwowiak - Frontend Engineer`,
