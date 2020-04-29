@@ -29,15 +29,8 @@ const AboutPage = ({ data }) => (
       <Image alt="About banner photo" fluid={data.file.childImageSharp.fluid} />
       <Paragraph>
         Hi, I&apos;m Bartek. I am a Web Developer and web technologies
-        passionate. Currently, I work remotely as a Frontend Engineer at{' '}
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.netguru.com/"
-        >
-          Netguru.
-        </a>{' '}
-        You can find me in a beautiful city of Poznan.
+        passionate. Currently, I work remotely as a Frontend Engineer. You can
+        find me in a beautiful city of Poznan.
       </Paragraph>
       <Paragraph>
         In 2018 I got my bachelor&apos;s degree in computer science at Poznan
