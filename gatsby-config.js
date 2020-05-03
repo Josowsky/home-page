@@ -1,7 +1,12 @@
 const path = require(`path`);
 const dotenv = require('dotenv');
 
-if (process.env.NODE_ENV !== 'production') {
+const CONTENTFUL_DELIVERY_API_HOST = 'cdn.contentful.com';
+const CONTENTFUL_PREVIEW_API_HOST = 'preview.contentful.com';
+
+const isProduction = process.env.NODE_ENV === 'production';
+
+if (!isProduction) {
   dotenv.config();
 }
 
@@ -38,6 +43,9 @@ module.exports = {
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        host: isProduction
+          ? CONTENTFUL_DELIVERY_API_HOST
+          : CONTENTFUL_PREVIEW_API_HOST,
       },
     },
     {
