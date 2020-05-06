@@ -44,7 +44,18 @@ export const Highlight = styled.span`
   border-radius: 4px;
 `;
 
+/**
+ * Lazy loaded image based on gatsby-image library
+ */
 export const Image = styled(Img)`
+  border-radius: 12px;
+  margin: ${grid * 2}px auto;
+`;
+
+/**
+ * Static image based on <img /> HTML tag
+ */
+export const StaticImage = styled.img`
   border-radius: 12px;
   margin: ${grid * 2}px auto;
 `;
