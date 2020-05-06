@@ -32,6 +32,11 @@ export const Paragraph = styled.p`
   line-height: 1.5em;
 `;
 
+export const ListItem = styled.li`
+  font-size: 16px;
+  line-height: 1.5em;
+`;
+
 export const Highlight = styled.span`
   color: ${colorBlue};
   background-color: ${`${colorBlue}20`};
