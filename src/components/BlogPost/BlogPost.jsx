@@ -29,7 +29,7 @@ const BlogPost = ({ data: { contentfulPost: post } }) => (
           {getBlogFormatDate(post.createdAt)}
           {post.readingTime && ` • ${post.readingTime} min read`}
         </StyledDescription>
-        <StyledPostImage sizes={post.image.sizes} />
+        {post.image && <StyledPostImage sizes={post.image.sizes} />}
       </StyledHeader>
       <StyledPostContent jsonPost={post.content.json} />
       {post.tags && (
@@ -43,7 +43,9 @@ const BlogPost = ({ data: { contentfulPost: post } }) => (
       <SEO
         title={`${post.title} - Blog`}
         description={post.description}
-        imageUrl={post.image.file.url.replace('//', 'http://')}
+        imageUrl={
+          post.image ? post.image.file.url.replace('//', 'http://') : ''
+        }
       />
     </StyledContainer>
   </BlogContent>
