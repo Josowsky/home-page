@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.2.0",
-    "@contentful/rich-text-types": "^13.1.0",
     "@reach/router": "^1.2.1",
     "dotenv": "^8.0.0",
     "gatsby": "^2.9.11",
@@ -45,6 +44,7 @@
     "react-helmet": "^5.2.1",
     "react-icons": "^3.7.0",
     "react-syntax-highlighter": "^11.0.1",
+    "rehype-react": "^5.0.1",
     "styled-components": "^4.3.1"
   },
   "devDependencies": {
