@@ -6,7 +6,7 @@ export default BlogPage;
 
 export const pageQuery = graphql`
   query {
-    allContentfulPost {
+    allContentfulPost(sort: { fields: [createdAt], order: DESC }) {
       edges {
         node {
           id
