@@ -31,7 +31,11 @@ const BlogPost = ({ data: { contentfulPost: post } }) => (
         </StyledDescription>
         {post.image && <StyledPostImage sizes={post.image.sizes} />}
       </StyledHeader>
-      <StyledPostContent jsonPost={post.content.json} />
+      {post.contentMd && (
+        <StyledPostContent
+          htmlAst={post.contentMd.childMarkdownRemark.htmlAst}
+        />
+      )}
       {post.tags && (
         <StyledTagsContainer>
           <Tags tags={post.tags} />
@@ -62,8 +66,10 @@ BlogPost.propTypes = {
         sizes: shape({}),
         file: shape({ url: string }),
       }),
-      content: shape({
-        json: shape({}).isRequired,
+      contentMd: shape({
+        childMarkdownRemark: shape({
+          htmlAst: shape({}).isRequired,
+        }).isRequired,
       }).isRequired,
       tags: arrayOf(string),
     }).isRequired,
@@ -87,8 +93,10 @@ export const pageQuery = graphql`
           url
         }
       }
-      content {
-        json
+      contentMd {
+        childMarkdownRemark {
+          htmlAst
+        }
       }
       tags
     }

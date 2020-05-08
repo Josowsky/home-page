@@ -32,6 +32,11 @@ export const Paragraph = styled.p`
   line-height: 1.5em;
 `;
 
+export const ListItem = styled.li`
+  font-size: 16px;
+  line-height: 1.5em;
+`;
+
 export const Highlight = styled.span`
   color: ${colorBlue};
   background-color: ${`${colorBlue}20`};
@@ -39,7 +44,18 @@ export const Highlight = styled.span`
   border-radius: 4px;
 `;
 
+/**
+ * Lazy loaded image based on gatsby-image library
+ */
 export const Image = styled(Img)`
+  border-radius: 12px;
+  margin: ${grid * 2}px auto;
+`;
+
+/**
+ * Static image based on <img /> HTML tag
+ */
+export const StaticImage = styled.img`
   border-radius: 12px;
   margin: ${grid * 2}px auto;
 `;

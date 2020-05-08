@@ -1,7 +1,6 @@
 import React from 'react';
 import { shape } from 'prop-types';
-import { BLOCKS, MARKS } from '@contentful/rich-text-types';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import rehypeReact from 'rehype-react';
 
 import { getCodeString } from 'shared/utils/getCodeString';
 import {
@@ -10,43 +9,46 @@ import {
   HeadingSmall,
   Paragraph,
   Highlight,
+  ListItem,
+  StaticImage,
 } from 'components/Typography/Typography';
 import { Code } from 'components/Code/Code';
 
-const BlogPostHTML = ({ jsonPost }) => {
-  const options = {
-    renderNode: {
-      [BLOCKS.PARAGRAPH]: (node, children) => <Paragraph>{children}</Paragraph>,
-      [BLOCKS.HEADING_1]: (node, children) => (
-        <HeadingLarge bold>{children}</HeadingLarge>
-      ),
-      [BLOCKS.HEADING_2]: (node, children) => (
-        <Heading bold>{children}</Heading>
-      ),
-      [BLOCKS.HEADING_3]: (node, children) => (
-        <HeadingSmall bold>{children}</HeadingSmall>
-      ),
-    },
-    renderMark: {
-      [MARKS.CODE]: text => {
-        const { codeString, lang } = getCodeString(text);
+/**
+ * Take html in json format and replace specific
+ * HTML tags with React components
+ * @param {json} htmlAst - HTML in proper json format
+ */
+const BlogPostHTML = ({ htmlAst }) => {
+  /* eslint-disable react/prop-types */
+  const components = {
+    p: Paragraph,
+    h1: ({ children }) => <HeadingLarge bold>{children}</HeadingLarge>,
+    h2: ({ children }) => <Heading bold>{children}</Heading>,
+    h3: ({ children }) => <HeadingSmall bold>{children}</HeadingSmall>,
+    code: ({ children }) => {
+      const codeSnippet = children ? children[0] : '';
 
-        return <Code code={codeString} language={lang} />;
-      },
-      [MARKS.ITALIC]: text => <Highlight>{text}</Highlight>,
+      const { codeString: code, lang } = getCodeString(codeSnippet);
+      return <Code code={code} language={lang} />;
     },
-    renderText: text => {
-      return text.split('\n').reduce((children, textSegment, index) => {
-        return [...children, index > 0 && <br key={index} />, textSegment];
-      }, []);
-    },
+    em: Highlight,
+    li: ListItem,
+    img: StaticImage,
   };
+  /* eslint-enable react/prop-types */
 
-  return <>{documentToReactComponents(jsonPost, options)}</>;
+  const renderAst = new rehypeReact({
+    createElement: React.createElement,
+    Fragment: React.Fragment,
+    components,
+  }).Compiler;
+
+  return <>{renderAst(htmlAst)}</>;
 };
 
 BlogPostHTML.propTypes = {
-  jsonPost: shape({}),
+  htmlAst: shape({}),
 };
 
 export default BlogPostHTML;
