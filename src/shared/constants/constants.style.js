@@ -1,3 +1,4 @@
+export const colorWhite = '#fff';
 export const colorBlue = '#00acc9';
 export const colorGrey = '#777';
 export const colorGreyLight = 'rgba(255, 255, 255, 0.6)';
