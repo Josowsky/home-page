@@ -39,6 +39,12 @@
       "rules": {
         "no-shadow": [0]
       }
+    },
+    {
+      "files": ["*.style.jsx"],
+      "rules": {
+        "consistent-return": [0]
+      }
     }
   ],
   "settings": {
