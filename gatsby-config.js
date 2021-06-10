@@ -63,14 +63,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        google: {
-          families: ['Ubuntu:300,400'],
-        },
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.ANALYTICS_TRACKING_ID,

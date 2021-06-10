@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Cell from './Cell/Cell';
+
 import { StyledContainer } from './Grid.style';
 
 const Grid = ({ children, role }) => (
@@ -12,4 +14,5 @@ Grid.propTypes = {
   role: PropTypes.string,
 };
 
+export { Cell };
 export default Grid;
