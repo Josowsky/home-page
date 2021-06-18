@@ -7,6 +7,8 @@ import { forTablet, forDesktop, forDesktopLarge } from './mediaQueries';
 const getCellWidth = (columns = 12) => (columns * 100) / 12;
 
 export const StyledContainer = styled.div`
+  flex-basis: 100%;
+  min-width: 100%;
   ${({ mobile, tablet, desktop, desktopLarge }) => {
     if (desktopLarge) {
       return forDesktopLarge(`
@@ -36,8 +38,6 @@ export const StyledContainer = styled.div`
       `;
     }
   }}
-  flex-basis: 100%;
-  min-width: 100%;
   flex-grow: 0;
   flex-shrink: 0;
   padding: ${grid / 2}px;
