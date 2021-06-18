@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { grid } from 'shared/constants/constants.style';
+import { gutter } from 'shared/constants/constants.style';
 
 import { forTablet, forDesktop, forDesktopLarge } from './mediaQueries';
 
@@ -40,5 +40,5 @@ export const StyledContainer = styled.div`
   }}
   flex-grow: 0;
   flex-shrink: 0;
-  padding: ${grid / 2}px;
+  padding: ${gutter()};
 `;

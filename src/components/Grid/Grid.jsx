@@ -5,13 +5,14 @@ import Cell from './Cell/Cell';
 
 import { StyledContainer } from './Grid.style';
 
-const Grid = ({ children, role }) => (
-  <StyledContainer {...{ role }}>{children}</StyledContainer>
+const Grid = ({ children, role, className }) => (
+  <StyledContainer {...{ role, className }}>{children}</StyledContainer>
 );
 
 Grid.propTypes = {
   children: PropTypes.node,
   role: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export { Cell };
