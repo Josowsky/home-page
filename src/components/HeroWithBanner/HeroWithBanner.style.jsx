@@ -1,19 +1,19 @@
 import styled from 'styled-components';
 
-import { gutter } from 'shared/constants/constants.style';
+import { gutter, colorGrey } from 'shared/constants/constants.style';
 
 import Grid from 'components/Grid/Grid';
 
 export const StyledContainer = styled(Grid)``;
 
-export const StyledBanner = styled.div`
-  background: red;
+export const StyledBanner = styled.img`
   margin-bottom: ${gutter(8)};
   border-radius: 10px;
-  height: 430px;
+  width: 100%;
 `;
 
 export const StyledTextContainer = styled.div`
-  height: 260px;
-  background: green;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: ${colorGrey};
 `;
