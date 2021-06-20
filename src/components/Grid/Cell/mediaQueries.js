@@ -1,24 +1,22 @@
-import { css } from 'styled-components';
-
 const breakpoints = {
   desktopLarge: 1200,
   desktop: 1024,
   tablet: 768,
 };
 
-export const forTablet = content => css`
+export const forTablet = content => `
   @media (min-width: ${breakpoints.tablet}px) {
     ${content}
   }
 `;
 
-export const forDesktop = content => css`
+export const forDesktop = content => `
   @media (min-width: ${breakpoints.desktop}px) {
     ${content}
   }
 `;
 
-export const forDesktopLarge = content => css`
+export const forDesktopLarge = content => `
   @media (min-width: ${breakpoints.desktopLarge}px) {
     ${content}
   }
