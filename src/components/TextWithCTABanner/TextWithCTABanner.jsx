@@ -13,7 +13,7 @@ import {
 const TextWithCTABanner = () => (
   <StyledContainer>
     <Grid>
-      <Cell mobile={5} mobileOffset={2}>
+      <Cell tablet={6} tabletOffset={1} desktop={5} desktopOffset={2}>
         <StyledHeader>I learn by writing</StyledHeader>
         <StyledText>
           One of the best ways to get a better understanding of a topic is to
@@ -21,7 +21,7 @@ const TextWithCTABanner = () => (
           time.
         </StyledText>
       </Cell>
-      <Cell mobile={2} mobileOffset={1}>
+      <Cell tablet={3} desktop={2} tabletOffset={1}>
         <StyledCTAContainer>
           <Button>Blog</Button>
         </StyledCTAContainer>
