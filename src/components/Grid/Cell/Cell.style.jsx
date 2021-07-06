@@ -1,8 +1,11 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import { gutter } from 'shared/constants/constants.style';
-
-import { forTablet, forDesktop, forDesktopLarge } from './mediaQueries';
+import {
+  forTablet,
+  forDesktop,
+  forDesktopLarge,
+} from 'shared/style-utils/mediaQueries';
 
 const getCellWidth = (columns = 12) => (columns * 100) / 12;
 
