@@ -5,7 +5,7 @@ import HeroLogo from './HeroLogo';
 import { StyledContainer } from './HeroLogo.stories.style';
 
 export default {
-  title: 'HeroLogo',
+  title: 'NewHomePage/HeroLogo',
   component: HeroLogo,
 };
 
