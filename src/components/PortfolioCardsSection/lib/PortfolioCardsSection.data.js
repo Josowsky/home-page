@@ -16,3 +16,11 @@ export default {
     },
   ],
 };
+
+export const storyData = {
+  title: 'Shrek',
+  text:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu suscipit mauris. Ut gravida, orci eget rutrum convallis, enim ante aliquam ligula, nec rhoncus diam ante sed nisl. Nunc consequat, erat sit amet ullamcorper ferme',
+  imageUrl: require('./assets/shrek.webp'),
+  href: '/project/shrek',
+};

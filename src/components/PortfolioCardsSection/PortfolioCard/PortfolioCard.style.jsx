@@ -5,6 +5,7 @@ import {
   colorGrey,
   colorWhite,
   colorRed,
+  colorGreyLight,
   gutter,
 } from 'shared/constants/constants.style';
 
@@ -17,16 +18,24 @@ export const StyledContainer = styled.section`
 `;
 
 export const StyledImageContainer = styled.a`
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   overflow: hidden;
   border-radius: 5px;
+  height: 300px;
   width: 100%;
   margin-bottom: ${gutter(2)};
 `;
 
-export const StyledImage = styled.img`
+export const StyledImage = styled.div`
+  height: 100%;
   width: 100%;
+  background-color: ${colorGreyLight};
+  background-image: url('${props => props.imageUrl}');
+  background-position: center;
+  background-size: cover;
   transition: transform 200ms ease-out;
   will-change: transform;
 
@@ -59,7 +68,7 @@ export const StyledLink = styled.div`
 export const StyledTitle = styled.h2`
   font-family: 'Roboto Slab', serif;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 32px;
   color: ${colorDarkGrey};
   margin-bottom: ${gutter()};
   text-align: right;

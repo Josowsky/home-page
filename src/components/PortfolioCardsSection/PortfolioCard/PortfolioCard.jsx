@@ -14,7 +14,7 @@ import {
 const PortfolioCard = ({ title, text, imageUrl, href }) => (
   <StyledContainer>
     <StyledImageContainer href={href}>
-      <StyledImage src={imageUrl} alt={title} />
+      <StyledImage imageUrl={imageUrl} />
       <StyledLink>
         <FaLink />
       </StyledLink>

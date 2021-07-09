@@ -15,7 +15,7 @@ export const StyledPortfolioCardContainer = styled(Cell)`
 
 export const StyledTitle = styled.h2`
   font-family: 'Roboto Slab', serif;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
   color: ${colorDarkGrey};
   margin-bottom: ${gutter(3)};
