@@ -48,11 +48,10 @@ const HeroWithBanner = () => (
         </p>
         <br />
         <p>
-          Years later I went to college, bought my first laptop, and started
-          experimenting with different languages. At some point, I tried doing
-          Javascript and immediately it clicked. I knew that I want to do web
-          development. I loved how easy it was to transform my idea into a
-          working app. And I could even make it look good!
+          This passion stayed with me to this day. Since then I finished my
+          Bachelor&apos;s Degree in Computer Science and I&apos;m working with
+          web technologies for a couple of years. I&apos;m excited about
+          building cool stuff!
         </p>
       </StyledTextContainer>
     </Cell>
