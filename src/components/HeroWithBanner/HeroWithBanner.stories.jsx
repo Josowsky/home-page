@@ -6,7 +6,7 @@ import HeroWithBanner from './HeroWithBanner';
 import { StyledContainer } from './HeroWithBanner.stories.style';
 
 export default {
-  title: 'HeroWithBanner',
+  title: 'NewHomePage/HeroWithBanner',
   component: HeroWithBanner,
 };
 

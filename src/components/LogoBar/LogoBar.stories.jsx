@@ -3,7 +3,7 @@ import React from 'react';
 import LogoBar from './LogoBar';
 
 export default {
-  title: 'LogoBar',
+  title: 'NewHomePage/LogoBar',
   component: LogoBar,
 };
 

@@ -6,7 +6,7 @@ import Cell from './Cell/Cell';
 import { StyledContainer, StyledCell } from './Grid.stories.style';
 
 export default {
-  title: 'Grid',
+  title: 'NewHomePage/Grid',
   component: Cell,
 };
 
