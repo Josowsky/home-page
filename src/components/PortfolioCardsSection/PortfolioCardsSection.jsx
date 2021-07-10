@@ -13,15 +13,12 @@ import {
 
 const isIndexEven = index => (index + 1) % 2 === 0;
 
-const PortfolioCardsSection = ({ items }) => (
+const PortfolioCardsSection = ({ title, description, items }) => (
   <>
     <Grid>
       <Cell tabletOffset={1} tablet={10} desktopOffset={1} desktop={6}>
-        <StyledTitle>My work</StyledTitle>
-        <StyledDescription>
-          I learn new stuff by dedicating my time to projects and initiatives
-          which I&apos;m interested in. Take a look at some of them.
-        </StyledDescription>
+        <StyledTitle>{title}</StyledTitle>
+        <StyledDescription>{description}</StyledDescription>
       </Cell>
     </Grid>
     <Grid>
@@ -38,6 +35,8 @@ const PortfolioCardsSection = ({ items }) => (
 );
 
 PortfolioCardsSection.propTypes = {
+  title: string.isRequired,
+  description: string.isRequired,
   items: arrayOf(
     shape({
       title: string.isRequired,

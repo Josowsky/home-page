@@ -1,4 +1,7 @@
 export default {
+  title: 'My work',
+  description:
+    "I learn new stuff by dedicating my time to projects and initiatives which I'm interested in. Take a look at some of them.",
   items: [
     {
       title: 'Gdzie Kino',
