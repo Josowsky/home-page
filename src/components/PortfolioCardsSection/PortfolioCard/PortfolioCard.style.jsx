@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { rgba } from 'polished';
 
 import {
   colorDarkGrey,
@@ -6,6 +7,7 @@ import {
   colorWhite,
   colorRed,
   colorGreyLight,
+  colorBlack,
   gutter,
 } from 'shared/constants/constants.style';
 
@@ -27,6 +29,26 @@ export const StyledImageContainer = styled.a`
   height: 300px;
   width: 100%;
   margin-bottom: ${gutter(2)};
+
+  &::after {
+    content: '';
+    background: linear-gradient(transparent, ${rgba(colorBlack, 0.5)}) left
+      repeat;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    transition: opacity 200ms ease-out;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
 `;
 
 export const StyledImage = styled.div`
@@ -54,6 +76,7 @@ export const StyledLink = styled.div`
   right: 0;
   transform: translate(50%, 50%);
   background-color: ${colorWhite};
+  z-index: 2;
 
   svg {
     position: absolute;
